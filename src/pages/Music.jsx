@@ -204,7 +204,7 @@ export default function Music() {
                 {/* TikTok Feed */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                     {tiktokVideos.map((videoId) => (
-                        <div key={videoId} className="rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 shadow-xl aspect-[9/16] relative group">
+                        <div key={videoId} className="rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800 shadow-xl aspect-9/16 relative group">
                             {activeVideo === videoId ? (
                                 <iframe
                                     src={`https://www.tiktok.com/embed/v2/${videoId}`}

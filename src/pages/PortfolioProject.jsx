@@ -34,7 +34,7 @@ export default function PortfolioProject() {
                 <a href="/proyectos" className="text-zinc-500 hover:text-indigo-400 text-sm flex items-center gap-2 mb-4 transition">
                     ← Volver a proyectos
                 </a>
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block mb-4">
+                <h1 className="text-4xl font-bold bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block mb-4">
                     Portafolio Web Personal
                 </h1>
                 <p className="text-zinc-400 text-lg max-w-3xl">

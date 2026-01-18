@@ -10,7 +10,7 @@ export default function Home() {
             <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl -z-10" />
             <div className="absolute top-1/2 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl -z-10" />
 
-            <div className="py-32 text-center px-4">
+            <div className="py-20 md:py-32 text-center px-4">
                 {/* Título */}
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}

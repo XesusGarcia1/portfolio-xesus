@@ -53,7 +53,7 @@ export default function ChatbotProject() {
                 <a href="/proyectos" className="text-zinc-500 hover:text-indigo-400 text-sm flex items-center gap-2 mb-4 transition">
                     ← Volver a proyectos
                 </a>
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
+                <h1 className="text-3xl font-bold bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
                     Chatbot con IA (Prototipo)
                 </h1>
                 <p className="text-zinc-400 mt-2 text-sm italic">

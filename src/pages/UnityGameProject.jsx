@@ -7,7 +7,7 @@ export default function UnityGameProject() {
                 <a href="/proyectos" className="text-zinc-500 hover:text-indigo-400 text-sm flex items-center gap-2 mb-4 transition">
                     ← Volver a proyectos
                 </a>
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block mb-4">
+                <h1 className="text-4xl font-bold bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block mb-4">
                     Videojuego en Unity
                 </h1>
                 <p className="text-zinc-400 text-lg max-w-3xl">
@@ -91,7 +91,7 @@ export default function UnityGameProject() {
             </div>
 
             {/* CTA Final */}
-            <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 rounded-3xl p-8 text-center border border-zinc-700/50">
+            <div className="bg-linear-to-r from-zinc-900 to-zinc-800 rounded-3xl p-8 text-center border border-zinc-700/50">
                 <h3 className="text-lg font-semibold mb-2">¿Quieres saber más sobre la arquitectura?</h3>
                 <p className="text-sm text-zinc-400 mb-6">Estoy abierto a discutir decisiones técnicas y colaboraciones en Game Dev.</p>
                 <a
