@@ -47,12 +47,12 @@ export default function Contact() {
                         Repositorios y proyectos personales.
                     </p>
                     <a
-                        href="https://github.com/tu-usuario"
+                        href="https://github.com/XesusGarcia1"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-indigo-400 hover:underline text-sm"
                     >
-                        github.com/tu-usuario
+                        github.com/XesusGarcia1
                     </a>
                 </div>
 
@@ -73,10 +73,9 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* CTA final */}
             <div className="text-center">
                 <a
-                    href="mailto:tu-correo@email.com"
+                    href="mailto:xesusgmusic@gmail.com"
                     className="
             inline-block px-8 py-3 rounded-xl
             bg-indigo-600 hover:bg-indigo-700
