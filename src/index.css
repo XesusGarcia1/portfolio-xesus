@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Opcional: estilos globales */
+html,
+body {
+  @apply bg-zinc-950 text-zinc-100;
+}
