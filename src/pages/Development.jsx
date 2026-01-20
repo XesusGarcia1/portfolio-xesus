@@ -96,7 +96,7 @@ export default function Development() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
                 <a
-                    href="/cv/Curriculum-Vitae-Jesus-Garcia.pdf"
+                    href="cv/Curriculum-Vitae-Jesus-Garcia.pdf"
                     download
                     className="
             inline-flex items-center gap-2
