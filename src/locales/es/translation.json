@@ -1,0 +1,218 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "development": "Desarrollo",
+        "projects": "Proyectos",
+        "music": "Música",
+        "achievements": "Logros",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "rights": "© {{year}} Xesus Garcia — Desarrollo & Música"
+    },
+    "home": {
+        "title_part1": "Desarrollador Web &",
+        "title_part2": "Creador Musical",
+        "description": "Construyo soluciones web modernas y desarrollo proyectos creativos combinando tecnología y música electrónica.",
+        "view_projects": "Ver proyectos",
+        "listen_music": "Escuchar música"
+    },
+    "projects": {
+        "title": "Proyectos",
+        "description": "Una selección de proyectos profesionales y personales en los que he trabajado, enfocados en desarrollo web, sistemas empresariales e iniciativas creativas.",
+        "professional_title": "Proyectos profesionales",
+        "personal_title": "Proyectos personales",
+        "gamedev_title": "Game Dev & Experimentos",
+        "view_details": "Ver detalles",
+        "view_evidence": "Ver evidencia",
+        "back_to_projects": "← Volver a proyectos",
+        "mind_project": "¿Tienes un proyecto en mente?",
+        "items": {
+            "cfe": {
+                "title": "Sistema de evaluación de personal (CFE)",
+                "description": "Desarrollo de una aplicación web para la evaluación y gestión de personal temporal, mejorando la organización y estandarización de procesos internos.",
+                "role": "Rol: Desarrollo Frontend & Backend",
+                "confidential": "Proyecto interno / confidencial"
+            },
+            "erp": {
+                "title": "Módulos ERP empresariales",
+                "description": "Desarrollo, mantenimiento y optimización de módulos ERP en producción, enfocados en reportes, lógica de negocio y automatización de procesos empresariales.",
+                "role": "Rol: Backend Developer",
+                "production_status": "Proyecto empresarial en producción"
+            },
+            "chatbot": {
+                "title": "Chatbot con Inteligencia Artificial",
+                "name": "Chatbot con IA (Prototipo)",
+                "description": "Proyecto personal enfocado en la exploración de sistemas conversacionales, integración de IA y automatización de respuestas.",
+                "example_desc": "Este es un ejemplo funcional de una interfaz de chat moderna con respuestas simuladas.",
+                "bot_name": "Xesus Bot",
+                "online": "Online",
+                "placeholder": "Escribe un mensaje...",
+                "stack_note": "Stack utilizado en este prototipo: React, Framer Motion, Tailwind CSS",
+                "responses": {
+                    "greeting": "¡Hola! Soy el asistente de Xesus. ¿En qué puedo ayudarte?",
+                    "greeting_again": "¡Hola de nuevo! Estoy aquí para responder sobre el trabajo de Xesus García.",
+                    "music": "Xesus produce música electrónica energética. Escucha sus últimos tracks en la sección Música o en Spotify: https://open.spotify.com/artist/7s8730CcZiGoqCiyYkaH2Z",
+                    "dev": "Es desarrollador Full Stack con especialización en PHP, React y sistemas ERP.",
+                    "contact": "Puedes contactar con él a través del formulario en la web o por LinkedIn.",
+                    "default": "Esa es una buena pregunta. Como soy un prototipo básico, ¡todavía estoy aprendiendo! Pero puedes contactarte con Xesus a travez de sus redes sociales."
+                }
+            },
+            "portfolio": {
+                "title": "Portafolio Web Personal",
+                "description": "Sitio web personal desarrollado para mostrar mi perfil profesional como desarrollador y creador musical, combinando diseño moderno y contenido real.",
+                "description_extended": "Este proyecto es mucho más que una carta de presentación; es una plataforma interactiva diseñada para fusionar mi identidad como desarrollador y productor musical.",
+                "tech_stack": "Stack Tecnológico",
+                "philosophy_title": "Filosofía del Proyecto",
+                "philosophy_desc": "\"La tecnología y el arte no son disciplinas separadas, sino capas de una misma experiencia. Este proyecto fue concebido como un espacio donde cada decisión técnica —desde la arquitectura hasta las animaciones— tiene un propósito claro: mejorar la forma en que el usuario percibe y consume el contenido. El enfoque principal no fue la complejidad, sino la claridad, el rendimiento y la coherencia. Cada componente es reutilizable, cada animación es sutil y cada integración externa está pensada para aportar valor real, no solo impacto visual.\"",
+                "view_github": "Ver Código en GitHub",
+                "features": {
+                    "design": {
+                        "title": "Diseño Premium",
+                        "desc": "Uso de degradados animados, efectos de auras (glows) y tipografía moderna para una experiencia visual de alto nivel."
+                    },
+                    "interactivity": {
+                        "title": "Interactividad Avanzada",
+                        "desc": "Integración de Framer Motion para transiciones suaves, modales dinámicos y un chatbot funcional para engagement del usuario."
+                    },
+                    "media": {
+                        "title": "Optimización de Media",
+                        "desc": "Sistema inteligente de reproducción de música (Spotify) y video (TikTok) que evita solapamiento de audio y optimiza la carga."
+                    },
+                    "architecture": {
+                        "title": "Arquitectura Escalable",
+                        "desc": "Desarrollado con React y Vite, utilizando un sistema de rutas limpio y componentes reutilizables."
+                    }
+                }
+            },
+            "unity": {
+                "title": "Videojuego en Unity — En desarrollo",
+                "name": "Videojuego en Unity",
+                "description": "Proyecto personal de videojuego desarrollado en Unity, enfocado en mecánicas de juego, control de estados, lógica de colisiones y arquitectura de sistemas.",
+                "demo_desc": "Demostración técnica de mecánicas, sistemas y arquitectura desarrollados en C# para Unity. Este proyecto se centra en la solidez del código y la fluidez de las interacciones.",
+                "status": "Estado: En desarrollo continuo (sin fecha definida)",
+                "wip": "Work in Progress",
+                "about_title": "Sobre el desarrollo",
+                "about_p1": "Este proyecto corresponde a un videojuego experimental desarrollado en Unity como parte de mi proceso de aprendizaje en Game Development. No se trata de un producto final ni cuenta con una fecha de lanzamiento definida; su propósito principal es la exploración técnica, el diseño de sistemas y la aplicación de buenas prácticas en C# dentro del motor.",
+                "about_p2": "Este proyecto fue concebido como un entorno de prueba y aprendizaje continuo, enfocado en experimentar con arquitecturas escalables y mantenibles dentro de Unity. El objetivo no es la finalización del videojuego como producto, sino la implementación y validación de sistemas fundamentales utilizados en el desarrollo de videojuegos.",
+                "technologies": "Tecnologías",
+                "skills": "Habilidades Aplicadas",
+                "skills_items": [
+                    "Programación Orientada a Objetos",
+                    "State Machines & Managers",
+                    "UI / UX en Juegos"
+                ],
+                "cta_title": "¿Quieres saber más sobre la arquitectura?",
+                "cta_desc": "Estoy abierto a discutir decisiones técnicas y colaboraciones en Game Dev.",
+                "cta_button": "Hablemos"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "description": "Estoy abierto a nuevas oportunidades, colaboraciones creativas y conversaciones técnicas. Si tienes un proyecto en mente o simplemente quieres conectar, no dudes en escribirme.",
+        "email_title": "Correo electrónico",
+        "email_desc": "La forma más directa de contactarme.",
+        "linkedin_title": "LinkedIn",
+        "linkedin_desc": "Conectemos profesionalmente.",
+        "github_title": "GitHub",
+        "github_desc": "Repositorios y proyectos personales.",
+        "music_title": "Proyecto musical",
+        "music_desc": "Para colaboraciones o proyectos creativos.",
+        "cta": "Hablemos"
+    },
+    "achievements": {
+        "title": "Logros",
+        "description": "A lo largo de mi trayectoria profesional y creativa, he alcanzado distintos hitos que reflejan mi crecimiento como desarrollador y creador musical, así como mi compromiso con el aprendizaje continuo y la calidad técnica.",
+        "professional_title": "Logros profesionales",
+        "creative_title": "Logros creativos y musicales",
+        "personal_title": "Crecimiento y aprendizaje",
+        "closing": "Estos logros representan etapas de un proceso en constante evolución, con enfoque en la mejora continua, la curiosidad técnica y la creación de soluciones con impacto real.",
+        "items": {
+            "erp": {
+                "title": "Participación en sistemas ERP en producción",
+                "desc": "Desarrollo, mantenimiento y optimización de módulos empresariales utilizados activamente por usuarios finales, contribuyendo a la estabilidad y evolución del sistema."
+            },
+            "solutions": {
+                "title": "Implementación de soluciones web empresariales",
+                "desc": "Desarrollo de aplicaciones web orientadas a la automatización de procesos, mejora de flujos internos y estandarización de operaciones."
+            },
+            "ia": {
+                "title": "Uso de IA como herramienta de productividad",
+                "desc": "Integración de herramientas de inteligencia artificial como apoyo en el análisis, documentación, prototipado y validación de soluciones técnicas."
+            },
+            "original_music": {
+                "title": "Publicación de música original",
+                "desc": "Lanzamiento de producciones musicales propias bajo el proyecto artístico Xesus Garcia, disponibles en plataformas de streaming como Spotify, YouTube y SoundCloud."
+            },
+            "artistic_identity": {
+                "title": "Construcción de una identidad artística",
+                "desc": "Desarrollo de un estilo musical definido dentro de géneros electrónicos, enfocado en energía, atmósfera y aplicación audiovisual."
+            },
+            "personal_projects": {
+                "title": "Desarrollo continuo de proyectos personales",
+                "desc": "Creación de proyectos propios en desarrollo web, inteligencia artificial y game development como medio de aprendizaje y experimentación técnica."
+            },
+            "modern_tech": {
+                "title": "Exploración de tecnologías modernas",
+                "desc": "Uso activo de frameworks modernos, herramientas de automatización y nuevas tecnologías para mantenerme actualizado y mejorar la calidad del trabajo."
+            }
+        }
+    },
+    "music": {
+        "title": "Música",
+        "description": "Bajo el nombre artístico Xesus Garcia, desarrollo y produzco música electrónica con un enfoque energético, oscuro y moderno. Mi trabajo combina ritmo, potencia y atmósferas intensas, orientadas tanto a la escucha activa como a contenido audiovisual.",
+        "styles_title": "Estilos y géneros",
+        "what_i_do_title": "Qué hago",
+        "what_i_do_desc": "Me especializo en la creación de tracks originales, remixes y producciones instrumentales, con énfasis en bajos contundentes, cowbells, drops agresivos y estructuras pensadas para:",
+        "what_i_do_items": [
+            "Edits de drift y automovilismo",
+            "Contenido para gimnasio y entrenamiento",
+            "Videos cortos (TikTok, Reels, Shorts)",
+            "Presentaciones y sets energéticos"
+        ],
+        "featured_tracks": "Tracks Destacados",
+        "featured_tracks_direct": "Reproducción directa disponible",
+        "explore_discography": "Explora mi Discografía",
+        "discography_desc": "El widget de perfil de Spotify es ideal para seguirme y ver mis nuevos lanzamientos, pero para escuchar música directamente te recomiendo usar los reproductores de arriba.",
+        "full_profile_title": "Mi perfil completo",
+        "full_profile_desc": "Sigue mi perfil para estar al tanto de todos mis lanzamientos.",
+        "view_spotify_profile": "Ver Perfil Spotify",
+        "videos_sets_title": "Videos & Sets",
+        "view_more_tiktok": "Ver más en TikTok",
+        "loading_preview": "Cargando preview...",
+        "click_to_play": "Click para reproducir",
+        "aesthetics_energy": "Estética & energía",
+        "platforms_title": "Plataformas",
+        "platforms_desc": "Mi música está disponible en las principales plataformas de streaming:",
+        "listen_music": "Escuchar música"
+    },
+    "development": {
+        "title": "Desarrollo",
+        "summary_part1": "Soy Desarrollador de Software con experiencia en desarrollo Backend, Frontend y sistemas ERP. Actualmente trabajo en Evidence Technology, participando en el desarrollo, mantenimiento y optimización de aplicaciones web empresariales.",
+        "summary_part2": "Mi experiencia incluye la implementación de lógica de negocio, funcionalidades avanzadas, pruebas e integración, así como la resolución de incidencias en entornos productivos.",
+        "summary_part3": "He trabajado con tecnologías como PHP, JavaScript, TypeScript, Python, Node.js, Laravel, CodeIgniter y Vue.js, integrando bases de datos relacionales y no relacionales.",
+        "tech_stack_title": "Stack tecnológico",
+        "specialization_title": "Áreas de especialización",
+        "areas": {
+            "backend": {
+                "title": "Backend & ERP",
+                "desc": "Desarrollo y optimización de módulos empresariales, lógica de negocio, reportes, integraciones y mantenimiento de sistemas ERP en producción."
+            },
+            "frontend": {
+                "title": "Frontend",
+                "desc": "Interfaces web modernas, mantenibles y orientadas a la experiencia de usuario utilizando frameworks modernos."
+            },
+            "automation_ia": {
+                "title": "Automatización & IA",
+                "desc": "Desarrollo de proyectos personales y profesionales enfocados en automatización de procesos y sistemas con inteligencia artificial."
+            },
+            "best_practices": {
+                "title": "Buenas prácticas",
+                "desc": "Código limpio, control de versiones, pruebas, documentación y enfoque en soluciones escalables."
+            }
+        },
+        "download_cv": "Descargar CV",
+        "view_projects": "Ver proyectos"
+    }
+}

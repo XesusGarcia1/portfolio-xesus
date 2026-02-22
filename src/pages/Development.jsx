@@ -1,32 +1,28 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Development() {
+    const { t } = useTranslation();
+
     return (
-        <section className="py-20 max-w-5xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8">Desarrollo</h1>
+        <section className="py-20 max-w-5xl mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-8">{t('development.title')}</h1>
 
             {/* Resumen profesional */}
             <p className="text-zinc-400 mb-6">
-                Soy <strong>Desarrollador de Software</strong> con experiencia en desarrollo
-                <strong> Backend, Frontend y sistemas ERP</strong>. Actualmente trabajo en
-                Evidence Technology, participando en el desarrollo, mantenimiento y
-                optimización de aplicaciones web empresariales.
+                {t('development.summary_part1')}
             </p>
 
             <p className="text-zinc-400 mb-6">
-                Mi experiencia incluye la implementación de <strong>lógica de negocio,
-                    funcionalidades avanzadas, pruebas e integración</strong>, así como la
-                resolución de incidencias en entornos productivos.
+                {t('development.summary_part2')}
             </p>
 
             <p className="text-zinc-400 mb-12">
-                He trabajado con tecnologías como
-                <strong> PHP, JavaScript, TypeScript, Python, Node.js, Laravel,
-                    CodeIgniter y Vue.js</strong>, integrando bases de datos relacionales y
-                no relacionales.
+                {t('development.summary_part3')}
             </p>
 
             {/* Stack tecnológico */}
             <div className="mb-14">
-                <h2 className="text-xl font-semibold mb-4">Stack tecnológico</h2>
+                <h2 className="text-xl font-semibold mb-4">{t('development.tech_stack_title')}</h2>
 
                 <div className="flex flex-wrap gap-3">
                     {[
@@ -55,39 +51,34 @@ export default function Development() {
 
             {/* Especialización */}
             <div className="mb-14">
-                <h2 className="text-xl font-semibold mb-6">Áreas de especialización</h2>
+                <h2 className="text-xl font-semibold mb-6">{t('development.specialization_title')}</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Backend & ERP</h3>
+                        <h3 className="font-semibold mb-2">{t('development.areas.backend.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Desarrollo y optimización de módulos empresariales,
-                            lógica de negocio, reportes, integraciones y mantenimiento
-                            de sistemas ERP en producción.
+                            {t('development.areas.backend.desc')}
                         </p>
                     </div>
 
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Frontend</h3>
+                        <h3 className="font-semibold mb-2">{t('development.areas.frontend.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Interfaces web modernas, mantenibles y orientadas a la
-                            experiencia de usuario utilizando frameworks modernos.
+                            {t('development.areas.frontend.desc')}
                         </p>
                     </div>
 
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Automatización & IA</h3>
+                        <h3 className="font-semibold mb-2">{t('development.areas.automation_ia.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Desarrollo de proyectos personales y profesionales enfocados
-                            en automatización de procesos y sistemas con inteligencia artificial.
+                            {t('development.areas.automation_ia.desc')}
                         </p>
                     </div>
 
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Buenas prácticas</h3>
+                        <h3 className="font-semibold mb-2">{t('development.areas.best_practices.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Código limpio, control de versiones, pruebas,
-                            documentación y enfoque en soluciones escalables.
+                            {t('development.areas.best_practices.desc')}
                         </p>
                     </div>
                 </div>
@@ -106,7 +97,7 @@ export default function Development() {
             text-white font-medium
           "
                 >
-                    📄 Descargar CV
+                    📄 {t('development.download_cv')}
                 </a>
 
                 <a
@@ -118,7 +109,7 @@ export default function Development() {
             transition
           "
                 >
-                    Ver proyectos
+                    {t('development.view_projects')}
                 </a>
             </div>
         </section>

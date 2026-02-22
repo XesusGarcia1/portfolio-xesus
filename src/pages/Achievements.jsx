@@ -1,41 +1,39 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Achievements() {
+    const { t } = useTranslation()
+
     return (
-        <section className="py-20 max-w-5xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8">Logros</h1>
+        <section className="py-20 max-w-5xl mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-8">{t('achievements.title')}</h1>
 
             <p className="text-zinc-400 mb-12 max-w-3xl">
-                A lo largo de mi trayectoria profesional y creativa, he alcanzado distintos
-                hitos que reflejan mi crecimiento como desarrollador y creador musical,
-                así como mi compromiso con el aprendizaje continuo y la calidad técnica.
+                {t('achievements.description')}
             </p>
 
             {/* Logros profesionales */}
             <div className="mb-16">
-                <h2 className="text-2xl font-semibold mb-6">Logros profesionales</h2>
+                <h2 className="text-2xl font-semibold mb-6">{t('achievements.professional_title')}</h2>
 
                 <ul className="space-y-6">
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Participación en sistemas ERP en producción</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.erp.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Desarrollo, mantenimiento y optimización de módulos empresariales utilizados
-                            activamente por usuarios finales, contribuyendo a la estabilidad y evolución
-                            del sistema.
+                            {t('achievements.items.erp.desc')}
                         </p>
                     </li>
 
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Implementación de soluciones web empresariales</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.solutions.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Desarrollo de aplicaciones web orientadas a la automatización de procesos,
-                            mejora de flujos internos y estandarización de operaciones.
+                            {t('achievements.items.solutions.desc')}
                         </p>
                     </li>
 
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Uso de IA como herramienta de productividad</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.ia.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Integración de herramientas de inteligencia artificial como apoyo en el análisis,
-                            documentación, prototipado y validación de soluciones técnicas.
+                            {t('achievements.items.ia.desc')}
                         </p>
                     </li>
                 </ul>
@@ -43,23 +41,20 @@ export default function Achievements() {
 
             {/* Logros creativos */}
             <div className="mb-16">
-                <h2 className="text-2xl font-semibold mb-6">Logros creativos y musicales</h2>
+                <h2 className="text-2xl font-semibold mb-6">{t('achievements.creative_title')}</h2>
 
                 <ul className="space-y-6">
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Publicación de música original</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.original_music.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Lanzamiento de producciones musicales propias bajo el proyecto artístico
-                            <strong> Xesus Garcia</strong>, disponibles en plataformas de streaming como
-                            Spotify, YouTube y SoundCloud.
+                            {t('achievements.items.original_music.desc')}
                         </p>
                     </li>
 
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Construcción de una identidad artística</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.artistic_identity.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Desarrollo de un estilo musical definido dentro de géneros electrónicos,
-                            enfocado en energía, atmósfera y aplicación audiovisual.
+                            {t('achievements.items.artistic_identity.desc')}
                         </p>
                     </li>
                 </ul>
@@ -67,22 +62,20 @@ export default function Achievements() {
 
             {/* Logros personales */}
             <div className="mb-16">
-                <h2 className="text-2xl font-semibold mb-6">Crecimiento y aprendizaje</h2>
+                <h2 className="text-2xl font-semibold mb-6">{t('achievements.personal_title')}</h2>
 
                 <ul className="space-y-6">
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Desarrollo continuo de proyectos personales</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.personal_projects.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Creación de proyectos propios en desarrollo web, inteligencia artificial
-                            y game development como medio de aprendizaje y experimentación técnica.
+                            {t('achievements.items.personal_projects.desc')}
                         </p>
                     </li>
 
                     <li className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                        <h3 className="font-semibold mb-2">Exploración de tecnologías modernas</h3>
+                        <h3 className="font-semibold mb-2">{t('achievements.items.modern_tech.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Uso activo de frameworks modernos, herramientas de automatización y nuevas
-                            tecnologías para mantenerme actualizado y mejorar la calidad del trabajo.
+                            {t('achievements.items.modern_tech.desc')}
                         </p>
                     </li>
                 </ul>
@@ -91,9 +84,7 @@ export default function Achievements() {
             {/* Cierre */}
             <div className="text-center">
                 <p className="text-zinc-500 text-sm max-w-2xl mx-auto">
-                    Estos logros representan etapas de un proceso en constante evolución,
-                    con enfoque en la mejora continua, la curiosidad técnica y la creación
-                    de soluciones con impacto real.
+                    {t('achievements.closing')}
                 </p>
             </div>
         </section>

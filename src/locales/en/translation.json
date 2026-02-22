@@ -1,0 +1,218 @@
+{
+    "nav": {
+        "home": "Home",
+        "development": "Development",
+        "projects": "Projects",
+        "music": "Music",
+        "achievements": "Achievements",
+        "contact": "Contact"
+    },
+    "footer": {
+        "rights": "© {{year}} Xesus Garcia — Development & Music"
+    },
+    "home": {
+        "title_part1": "Web Developer &",
+        "title_part2": "Music Creator",
+        "description": "I build modern web solutions and develop creative projects combining technology and electronic music.",
+        "view_projects": "View projects",
+        "listen_music": "Listen music"
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "A selection of professional and personal projects I've worked on, focused on web development, business systems, and creative initiatives.",
+        "professional_title": "Professional projects",
+        "personal_title": "Personal projects",
+        "gamedev_title": "Game Dev & Experiments",
+        "view_details": "View details",
+        "view_evidence": "View evidence",
+        "back_to_projects": "← Back to projects",
+        "mind_project": "Do you have a project in mind?",
+        "items": {
+            "cfe": {
+                "title": "Staff Evaluation System (CFE)",
+                "description": "Development of a web application for the evaluation and management of temporary staff, improving organization and standardization of internal processes.",
+                "role": "Role: Frontend & Backend Development",
+                "confidential": "Internal / confidential project"
+            },
+            "erp": {
+                "title": "Business ERP Modules",
+                "description": "Development, maintenance and optimization of ERP modules in production, focused on reports, business logic and business process automation.",
+                "role": "Role: Backend Developer",
+                "production_status": "Enterprise project in production"
+            },
+            "chatbot": {
+                "title": "AI Chatbot",
+                "name": "AI Chatbot (Prototype)",
+                "description": "Personal project focused on exploring conversational systems, AI integration, and response automation.",
+                "example_desc": "This is a functional example of a modern chat interface with simulated responses.",
+                "bot_name": "Xesus Bot",
+                "online": "Online",
+                "placeholder": "Type a message...",
+                "stack_note": "Stack used in this prototype: React, Framer Motion, Tailwind CSS",
+                "responses": {
+                    "greeting": "Hello! I am Xesus's assistant. How can I help you?",
+                    "greeting_again": "Hello again! I'm here to answer about Xesus García's work.",
+                    "music": "Xesus produces energetic electronic music. Listen to his latest tracks in the Music section or on Spotify: https://open.spotify.com/artist/7s8730CcZiGoqCiyYkaH2Z",
+                    "dev": "He is a Full Stack developer with specialization in PHP, React and ERP systems.",
+                    "contact": "You can contact him through the form on the web or via LinkedIn.",
+                    "default": "That's a good question. As I am a basic prototype, I am still learning! But you can contact Xesus through his social networks."
+                }
+            },
+            "portfolio": {
+                "title": "Personal Web Portfolio",
+                "description": "Personal website developed to show my professional profile as a developer and music creator, combining modern design and real content.",
+                "description_extended": "This project is much more than a cover letter; it is an interactive platform designed to merge my identity as a developer and music producer.",
+                "tech_stack": "Tech Stack",
+                "philosophy_title": "Project Philosophy",
+                "philosophy_desc": "\"Technology and art are not separate disciplines, but layers of the same experience. This project was conceived as a space where every technical decision —from the architecture to the animations— has a clear purpose: to improve the way the user perceives and consumes the content. The main focus was not complexity, but clarity, performance and consistency. Each component is reusable, each animation is subtle and each external integration is thought to provide real value, not just visual impact.\"",
+                "view_github": "View Code on GitHub",
+                "features": {
+                    "design": {
+                        "title": "Premium Design",
+                        "desc": "Use of animated gradients, aura effects (glows) and modern typography for a high-level visual experience."
+                    },
+                    "interactivity": {
+                        "title": "Advanced Interactivity",
+                        "desc": "Integration of Framer Motion for smooth transitions, dynamic modals and a functional chatbot for user engagement."
+                    },
+                    "media": {
+                        "title": "Media Optimization",
+                        "desc": "Intelligent music (Spotify) and video (TikTok) playback system that avoids audio overlapping and optimizes loading."
+                    },
+                    "architecture": {
+                        "title": "Scalable Architecture",
+                        "desc": "Developed with React and Vite, using a clean routing system and reusable components."
+                    }
+                }
+            },
+            "unity": {
+                "title": "Unity Video Game — In development",
+                "name": "Unity Video Game",
+                "description": "Personal video game project developed in Unity, focused on game mechanics, state control, collision logic, and systems architecture.",
+                "demo_desc": "Technical demonstration of mechanics, systems and architecture developed in C# for Unity. This project focuses on code solidity and interaction fluidity.",
+                "status": "Status: In continuous development (no date set)",
+                "wip": "Work in Progress",
+                "about_title": "About the development",
+                "about_p1": "This project corresponds to an experimental video game developed in Unity as part of my learning process in Game Development. It is not a final product nor does it have a set release date; its main purpose is technical exploration, systems design, and the application of best practices in C# within the engine.",
+                "about_p2": "This project was conceived as a testing and continuous learning environment, focused on experimenting with scalable and maintainable architectures within Unity. The goal is not the completion of the video game as a product, but the implementation and validation of fundamental systems used in video game development.",
+                "technologies": "Technologies",
+                "skills": "Skills Applied",
+                "skills_items": [
+                    "Object Oriented Programming",
+                    "State Machines & Managers",
+                    "UI / UX in Games"
+                ],
+                "cta_title": "Do you want to know more about the architecture?",
+                "cta_desc": "I am open to discussing technical decisions and collaborations in Game Dev.",
+                "cta_button": "Let's talk"
+            }
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "I am open to new opportunities, creative collaborations, and technical conversations. If you have a project in mind or simply want to connect, feel free to write to me.",
+        "email_title": "Email",
+        "email_desc": "The most direct way to contact me.",
+        "linkedin_title": "LinkedIn",
+        "linkedin_desc": "Let's connect professionally.",
+        "github_title": "GitHub",
+        "github_desc": "Personal repositories and projects.",
+        "music_title": "Music project",
+        "music_desc": "For collaborations or creative projects.",
+        "cta": "Let's talk"
+    },
+    "achievements": {
+        "title": "Achievements",
+        "description": "Throughout my professional and creative career, I have reached various milestones that reflect my growth as a developer and music creator, as well as my commitment to continuous learning and technical quality.",
+        "professional_title": "Professional achievements",
+        "creative_title": "Creative and musical achievements",
+        "personal_title": "Growth and learning",
+        "closing": "These achievements represent stages of a process in constant evolution, with a focus on continuous improvement, technical curiosity, and the creation of solutions with real impact.",
+        "items": {
+            "erp": {
+                "title": "Participation in ERP systems in production",
+                "desc": "Development, maintenance, and optimization of business modules actively used by end users, contributing to the stability and evolution of the system."
+            },
+            "solutions": {
+                "title": "Implementation of business web solutions",
+                "desc": "Development of web applications aimed at process automation, internal flow improvement, and operations standardization."
+            },
+            "ia": {
+                "title": "Use of AI as a productivity tool",
+                "desc": "Integration of artificial intelligence tools as support in analysis, documentation, prototyping, and validation of technical solutions."
+            },
+            "original_music": {
+                "title": "Publication of original music",
+                "desc": "Release of own musical productions under the artistic project Xesus Garcia, available on streaming platforms such as Spotify, YouTube, and SoundCloud."
+            },
+            "artistic_identity": {
+                "title": "Building an artistic identity",
+                "desc": "Development of a defined musical style within electronic genres, focused on energy, atmosphere, and audiovisual application."
+            },
+            "personal_projects": {
+                "title": "Continuous development of personal projects",
+                "desc": "Creation of own projects in web development, artificial intelligence, and game development as a means of learning and technical experimentation."
+            },
+            "modern_tech": {
+                "title": "Exploration of modern technologies",
+                "desc": "Active use of modern frameworks, automation tools, and new technologies to stay up-to-date and improve the quality of work."
+            }
+        }
+    },
+    "music": {
+        "title": "Music",
+        "description": "Under the artistic name Xesus Garcia, I develop and produce electronic music with an energetic, dark and modern focus. My work combines rhythm, power and intense atmospheres, oriented to both active listening and audiovisual content.",
+        "styles_title": "Styles & genres",
+        "what_i_do_title": "What I do",
+        "what_i_do_desc": "I specialize in creating original tracks, remixes and instrumental productions, with emphasis on punchy bass, cowbells, aggressive drops and structures designed for:",
+        "what_i_do_items": [
+            "Drift and automotive edits",
+            "Gym and workout content",
+            "Short videos (TikTok, Reels, Shorts)",
+            "Energetic performances and sets"
+        ],
+        "featured_tracks": "Featured Tracks",
+        "featured_tracks_direct": "Direct playback available",
+        "explore_discography": "Explore my Discography",
+        "discography_desc": "The Spotify profile widget is ideal for following me and seeing my new releases, but for listening to music directly I recommend using the players above.",
+        "full_profile_title": "Full profile",
+        "full_profile_desc": "Follow my profile to stay up-to-date with all my releases.",
+        "view_spotify_profile": "View Spotify Profile",
+        "videos_sets_title": "Videos & Sets",
+        "view_more_tiktok": "View more on TikTok",
+        "loading_preview": "Loading preview...",
+        "click_to_play": "Click to play",
+        "aesthetics_energy": "Aesthetics & energy",
+        "platforms_title": "Platforms",
+        "platforms_desc": "My music is available on all major streaming platforms:",
+        "listen_music": "Listen music"
+    },
+    "development": {
+        "title": "Development",
+        "summary_part1": "I am a Software Developer with experience in Backend, Frontend and ERP system development. Currently working at Evidence Technology, participating in the development, maintenance and optimization of business web applications.",
+        "summary_part2": "My experience includes business logic implementation, advanced features, testing and integration, as well as incident resolution in production environments.",
+        "summary_part3": "I have worked with technologies such as PHP, JavaScript, TypeScript, Python, Node.js, Laravel, CodeIgniter and Vue.js, integrating relational and non-relational databases.",
+        "tech_stack_title": "Tech stack",
+        "specialization_title": "Areas of specialization",
+        "areas": {
+            "backend": {
+                "title": "Backend & ERP",
+                "desc": "Development and optimization of business modules, business logic, reports, integrations and maintenance of ERP systems in production."
+            },
+            "frontend": {
+                "title": "Frontend",
+                "desc": "Modern web interfaces, maintainable and focused on user experience using modern frameworks."
+            },
+            "automation_ia": {
+                "title": "Automation & AI",
+                "desc": "Development of personal and professional projects focused on process automation and artificial intelligence systems."
+            },
+            "best_practices": {
+                "title": "Best practices",
+                "desc": "Clean code, version control, testing, documentation and focus on scalable solutions."
+            }
+        },
+        "download_cv": "Download CV",
+        "view_projects": "View projects"
+    }
+}

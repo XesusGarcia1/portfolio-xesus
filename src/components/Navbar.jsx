@@ -1,18 +1,20 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-
-const links = [
-    { to: '/', label: 'Inicio' },
-    { to: '/desarrollo', label: 'Desarrollo' },
-    { to: '/proyectos', label: 'Proyectos' },
-    { to: '/musica', label: 'Música' },
-    { to: '/logros', label: 'Logros' },
-    { to: '/contacto', label: 'Contacto' },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function Navbar() {
+    const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false)
+
+    const links = [
+        { to: '/', label: t('nav.home') },
+        { to: '/desarrollo', label: t('nav.development') },
+        { to: '/proyectos', label: t('nav.projects') },
+        { to: '/musica', label: t('nav.music') },
+        { to: '/logros', label: t('nav.achievements') },
+        { to: '/contacto', label: t('nav.contact') },
+    ]
 
     return (
         <header className="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-md z-100">

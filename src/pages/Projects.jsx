@@ -1,31 +1,31 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Projects() {
+    const { t } = useTranslation()
+
     return (
-        <section className="py-20 max-w-6xl mx-auto">
-            <h1 className="text-3xl font-bold mb-6">Proyectos</h1>
+        <section className="py-20 max-w-6xl mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-6">{t('projects.title')}</h1>
 
             <p className="text-zinc-400 mb-12">
-                Una selección de proyectos profesionales y personales en los que he
-                trabajado, enfocados en desarrollo web, sistemas empresariales e
-                iniciativas creativas.
+                {t('projects.description')}
             </p>
 
             {/* Proyectos profesionales */}
             <div className="mb-20">
                 <h2 className="text-2xl font-semibold mb-6">
-                    Proyectos profesionales
+                    {t('projects.professional_title')}
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Proyecto 1 */}
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
                         <h3 className="text-lg font-semibold mb-2">
-                            Sistema de evaluación de personal (CFE)
+                            {t('projects.items.cfe.title')}
                         </h3>
 
                         <p className="text-zinc-400 text-sm mb-4">
-                            Desarrollo de una aplicación web para la evaluación y gestión de
-                            personal temporal, mejorando la organización y estandarización de
-                            procesos internos.
+                            {t('projects.items.cfe.description')}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -40,12 +40,12 @@ export default function Projects() {
                         </div>
 
                         <p className="text-zinc-500 text-xs mb-4">
-                            Rol: Desarrollo Frontend & Backend
+                            {t('projects.items.cfe.role')}
                         </p>
 
                         <div className="flex gap-3">
                             <span className="text-xs text-zinc-500 italic">
-                                Proyecto interno / confidencial
+                                {t('projects.items.cfe.confidential')}
                             </span>
                         </div>
                     </div>
@@ -53,13 +53,11 @@ export default function Projects() {
                     {/* Proyecto 2 */}
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
                         <h3 className="text-lg font-semibold mb-2">
-                            Módulos ERP empresariales
+                            {t('projects.items.erp.title')}
                         </h3>
 
                         <p className="text-zinc-400 text-sm mb-4">
-                            Desarrollo, mantenimiento y optimización de módulos ERP en
-                            producción, enfocados en reportes, lógica de negocio y
-                            automatización de procesos empresariales.
+                            {t('projects.items.erp.description')}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -74,11 +72,11 @@ export default function Projects() {
                         </div>
 
                         <p className="text-zinc-500 text-xs mb-4">
-                            Rol: Backend Developer
+                            {t('projects.items.erp.role')}
                         </p>
 
                         <span className="text-xs text-zinc-500 italic">
-                            Proyecto empresarial en producción
+                            {t('projects.items.erp.production_status')}
                         </span>
                     </div>
                 </div>
@@ -87,19 +85,18 @@ export default function Projects() {
             {/* Proyectos personales */}
             <div className="mb-20">
                 <h2 className="text-2xl font-semibold mb-6">
-                    Proyectos personales
+                    {t('projects.personal_title')}
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Proyecto IA */}
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
                         <h3 className="text-lg font-semibold mb-2">
-                            Chatbot con Inteligencia Artificial
+                            {t('projects.items.chatbot.title')}
                         </h3>
 
                         <p className="text-zinc-400 text-sm mb-4">
-                            Proyecto personal enfocado en la exploración de sistemas
-                            conversacionales, integración de IA y automatización de respuestas.
+                            {t('projects.items.chatbot.description')}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -118,7 +115,7 @@ export default function Projects() {
                                 href="/proyectos/chatbot"
                                 className="text-sm text-indigo-400 hover:underline"
                             >
-                                Ver detalles
+                                {t('projects.view_details')}
                             </a>
                         </div>
                     </div>
@@ -126,13 +123,11 @@ export default function Projects() {
                     {/* Proyecto Portafolio */}
                     <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
                         <h3 className="text-lg font-semibold mb-2">
-                            Portafolio Web Personal
+                            {t('projects.items.portfolio.title')}
                         </h3>
 
                         <p className="text-zinc-400 text-sm mb-4">
-                            Sitio web personal desarrollado para mostrar mi perfil profesional
-                            como desarrollador y creador musical, combinando diseño moderno y
-                            contenido real.
+                            {t('projects.items.portfolio.description')}
                         </p>
 
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -151,53 +146,51 @@ export default function Projects() {
                                 href="/proyectos/portafolio"
                                 className="text-sm text-indigo-400 hover:underline"
                             >
-                                Ver detalles
+                                {t('projects.view_details')}
                             </a>
                         </div>
                     </div>
-                    {/* Game Dev & Experimentos */}
-                    <div className="mb-20">
-                        <h2 className="text-2xl font-semibold mb-6">
-                            Game Dev & Experimentos
-                        </h2>
+                </div>
+            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                                <h3 className="text-lg font-semibold mb-2">
-                                    Videojuego en Unity — En desarrollo
-                                </h3>
+            {/* Game Dev & Experimentos */}
+            <div className="mb-20">
+                <h2 className="text-2xl font-semibold mb-6">
+                    {t('projects.gamedev_title')}
+                </h2>
 
-                                <p className="text-zinc-400 text-sm mb-4">
-                                    Proyecto personal de videojuego desarrollado en Unity, enfocado en
-                                    mecánicas de juego, control de estados, lógica de colisiones y
-                                    arquitectura de sistemas.
-                                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
+                        <h3 className="text-lg font-semibold mb-2">
+                            {t('projects.items.unity.title')}
+                        </h3>
 
-                                <div className="flex flex-wrap gap-2 mb-4">
-                                    {['Unity', 'C#', 'Game Design', 'State Machines'].map(tech => (
-                                        <span
-                                            key={tech}
-                                            className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs"
-                                        >
-                                            {tech}
-                                        </span>
-                                    ))}
-                                </div>
+                        <p className="text-zinc-400 text-sm mb-4">
+                            {t('projects.items.unity.description')}
+                        </p>
 
-                                <p className="text-zinc-500 text-xs mb-4">
-                                    Estado: En desarrollo continuo (sin fecha definida)
-                                </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            {['Unity', 'C#', 'Game Design', 'State Machines'].map(tech => (
+                                <span
+                                    key={tech}
+                                    className="px-3 py-1 rounded-full bg-zinc-800 text-zinc-300 text-xs"
+                                >
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
 
-                                <div className="flex gap-4">
-                                    <a
-                                        href="/proyectos/unity-game"
-                                        className="text-sm text-indigo-400 hover:underline"
-                                    >
-                                        Ver evidencia
-                                    </a>
-                                </div>
-                            </div>
+                        <p className="text-zinc-500 text-xs mb-4">
+                            {t('projects.items.unity.status')}
+                        </p>
 
+                        <div className="flex gap-4">
+                            <a
+                                href="/proyectos/unity-game"
+                                className="text-sm text-indigo-400 hover:underline"
+                            >
+                                {t('projects.view_evidence')}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +206,7 @@ export default function Projects() {
             transition text-white font-medium
           "
                 >
-                    ¿Tienes un proyecto en mente?
+                    {t('projects.mind_project')}
                 </a>
             </div>
         </section>

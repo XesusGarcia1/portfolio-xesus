@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export default function Home() {
+    const { t } = useTranslation();
+
     return (
         <section className="relative overflow-hidden">
             {/* Fondo con degradado */}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-900/30 via-zinc-950 to-purple-900/30" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-br from-indigo-900/30 via-zinc-950 to-purple-900/30" />
 
             {/* Glow decorativo */}
             <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl -z-10" />
@@ -18,9 +21,9 @@ export default function Home() {
                     transition={{ duration: 0.8 }}
                     className="text-4xl md:text-6xl font-extrabold mb-6"
                 >
-                    Desarrollador Web &{' '}
-                    <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                        Creador Musical
+                    {t('home.title_part1')}{' '}
+                    <span className="bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                        {t('home.title_part2')}
                     </span>
                 </motion.h1>
 
@@ -31,8 +34,7 @@ export default function Home() {
                     transition={{ duration: 0.8, delay: 0.15 }}
                     className="max-w-2xl mx-auto text-zinc-400 text-lg mb-12"
                 >
-                    Construyo soluciones web modernas y desarrollo proyectos creativos
-                    combinando tecnología y música electrónica.
+                    {t('home.description')}
                 </motion.p>
 
                 {/* Botones */}
@@ -46,14 +48,14 @@ export default function Home() {
                         href="/proyectos"
                         className="
               px-7 py-3 rounded-xl
-              bg-gradient-to-r from-indigo-600 to-indigo-500
+              bg-linear-to-r from-indigo-600 to-indigo-500
               hover:from-indigo-500 hover:to-indigo-600
               transition-all duration-300
               text-white font-medium
               shadow-lg shadow-indigo-600/30
             "
                     >
-                        Ver proyectos
+                        {t('home.view_projects')}
                     </a>
 
                     <a
@@ -65,7 +67,7 @@ export default function Home() {
               transition-all duration-300
             "
                     >
-                        Escuchar música
+                        {t('home.listen_music')}
                     </a>
                 </motion.div>
             </div>

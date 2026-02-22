@@ -1,20 +1,22 @@
+import { useTranslation } from 'react-i18next'
+
 export default function Contact() {
+    const { t } = useTranslation();
+
     return (
-        <section className="py-20 max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold mb-8">Contacto</h1>
+        <section className="py-20 max-w-4xl mx-auto px-4">
+            <h1 className="text-3xl font-bold mb-8">{t('contact.title')}</h1>
 
             <p className="text-zinc-400 mb-12 max-w-2xl">
-                Estoy abierto a nuevas oportunidades, colaboraciones creativas y
-                conversaciones técnicas. Si tienes un proyecto en mente o simplemente
-                quieres conectar, no dudes en escribirme.
+                {t('contact.description')}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
                 {/* Email */}
                 <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                    <h3 className="font-semibold mb-2">Correo electrónico</h3>
+                    <h3 className="font-semibold mb-2">{t('contact.email_title')}</h3>
                     <p className="text-zinc-400 text-sm mb-4">
-                        La forma más directa de contactarme.
+                        {t('contact.email_desc')}
                     </p>
                     <a
                         href="mailto:xesusgmusic@gmail.com"
@@ -26,9 +28,9 @@ export default function Contact() {
 
                 {/* LinkedIn */}
                 <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                    <h3 className="font-semibold mb-2">LinkedIn</h3>
+                    <h3 className="font-semibold mb-2">{t('contact.linkedin_title')}</h3>
                     <p className="text-zinc-400 text-sm mb-4">
-                        Conectemos profesionalmente.
+                        {t('contact.linkedin_desc')}
                     </p>
                     <a
                         href="https://www.linkedin.com/in/xesusgarcia/"
@@ -41,10 +43,10 @@ export default function Contact() {
                 </div>
 
                 {/* GitHub */}
-                <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                    <h3 className="font-semibold mb-2">GitHub</h3>
+                {/*  <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
+                    <h3 className="font-semibold mb-2">{t('contact.github_title')}</h3>
                     <p className="text-zinc-400 text-sm mb-4">
-                        Repositorios y proyectos personales.
+                        {t('contact.github_desc')}
                     </p>
                     <a
                         href="https://github.com/XesusGarcia1"
@@ -54,13 +56,13 @@ export default function Contact() {
                     >
                         github.com/XesusGarcia1
                     </a>
-                </div>
+                </div> */}
 
                 {/* Música */}
                 <div className="p-6 rounded-xl bg-zinc-900 border border-zinc-800">
-                    <h3 className="font-semibold mb-2">Proyecto musical</h3>
+                    <h3 className="font-semibold mb-2">{t('contact.music_title')}</h3>
                     <p className="text-zinc-400 text-sm mb-4">
-                        Para colaboraciones o proyectos creativos.
+                        {t('contact.music_desc')}
                     </p>
                     <a
                         href="https://open.spotify.com/intl-es/artist/7s8730CcZiGoqCiyYkaH2Z"
@@ -82,7 +84,7 @@ export default function Contact() {
             transition text-white font-medium
           "
                 >
-                    Hablemos
+                    {t('contact.cta')}
                 </a>
             </div>
         </section>

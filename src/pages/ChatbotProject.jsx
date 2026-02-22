@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export default function ChatbotProject() {
+    const { t } = useTranslation();
     const [messages, setMessages] = useState([
-        { id: 1, text: "¡Hola! Soy el asistente de Xesus. ¿En qué puedo ayudarte?", sender: 'bot' }
+        { id: 1, text: t('projects.items.chatbot.responses.greeting'), sender: 'bot' }
     ]);
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -40,24 +42,46 @@ export default function ChatbotProject() {
 
     const getBotResponse = (text) => {
         const lower = text.toLowerCase();
-        if (lower.includes('hola') || lower.includes('buenos')) return "¡Hola de nuevo! Estoy aquí para responder sobre el trabajo de Xesus García.";
-        if (lower.includes('musica') || lower.includes('spotify')) return "Xesus produce música electrónica energética. Puedes escuchar sus últimos tracks en la sección de Música.";
-        if (lower.includes('desarrollo') || lower.includes('programar')) return "Es desarrollador Full Stack con especialización en PHP, React y sistemas ERP.";
-        if (lower.includes('contacto')) return "Puedes contactar con él a través del formulario en la web o por LinkedIn.";
-        return "Esa es una buena pregunta. Como soy un prototipo básico, ¡todavía estoy aprendiendo! Pero Xesus te puede contar más en persona.";
+        if (lower.includes('hola') || lower.includes('buenos') || lower.includes('hello') || lower.includes('hi'))
+            return t('projects.items.chatbot.responses.greeting_again');
+        if (lower.includes('musica') || lower.includes('spotify') || lower.includes('music'))
+            return t('projects.items.chatbot.responses.music');
+        if (lower.includes('desarrollo') || lower.includes('programar') || lower.includes('development') || lower.includes('code'))
+            return t('projects.items.chatbot.responses.dev');
+        if (lower.includes('contacto') || lower.includes('contact'))
+            return t('projects.items.chatbot.responses.contact');
+        return t('projects.items.chatbot.responses.default');
+    };
+
+    const renderMessage = (text) => {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        const parts = text.split(urlRegex);
+        return parts.map((part, i) =>
+            urlRegex.test(part) ? (
+                <a
+                    key={i}
+                    href={part}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-400 hover:underline break-all"
+                >
+                    {part}
+                </a>
+            ) : part
+        );
     };
 
     return (
         <section className="py-12 max-w-4xl mx-auto px-4 min-h-[80vh] flex flex-col">
             <div className="mb-8">
                 <a href="/proyectos" className="text-zinc-500 hover:text-indigo-400 text-sm flex items-center gap-2 mb-4 transition">
-                    ← Volver a proyectos
+                    {t('projects.back_to_projects')}
                 </a>
                 <h1 className="text-3xl font-bold bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent inline-block">
-                    Chatbot con IA (Prototipo)
+                    {t('projects.items.chatbot.name')}
                 </h1>
                 <p className="text-zinc-400 mt-2 text-sm italic">
-                    Este es un ejemplo funcional de una interfaz de chat moderna con respuestas simuladas.
+                    {t('projects.items.chatbot.example_desc')}
                 </p>
             </div>
 
@@ -71,10 +95,10 @@ export default function ChatbotProject() {
                         </svg>
                     </div>
                     <div>
-                        <h2 className="font-semibold text-sm">Xesus Bot</h2>
+                        <h2 className="font-semibold text-sm">{t('projects.items.chatbot.bot_name')}</h2>
                         <span className="text-[10px] text-emerald-500 flex items-center gap-1">
                             <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
-                            Online
+                            {t('projects.items.chatbot.online')}
                         </span>
                     </div>
                 </div>
@@ -93,7 +117,7 @@ export default function ChatbotProject() {
                                     ? 'bg-indigo-600 text-white rounded-tr-none shadow-lg shadow-indigo-600/20'
                                     : 'bg-zinc-800 text-zinc-200 rounded-tl-none border border-zinc-700'
                                     }`}>
-                                    {msg.text}
+                                    {renderMessage(msg.text)}
                                 </div>
                             </motion.div>
                         ))}
@@ -124,7 +148,7 @@ export default function ChatbotProject() {
                             type="text"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
-                            placeholder="Escribe un mensaje..."
+                            placeholder={t('projects.items.chatbot.placeholder')}
                             className="flex-1 bg-zinc-800 border border-zinc-700 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-500 transition"
                         />
                         <button
@@ -141,7 +165,7 @@ export default function ChatbotProject() {
             </div>
 
             <div className="mt-8 text-xs text-zinc-500 text-center">
-                Stack utilizado en este prototipo: React, Framer Motion, Tailwind CSS
+                {t('projects.items.chatbot.stack_note')}
             </div>
         </section>
     )
