@@ -87,7 +87,7 @@ export default function Development() {
             {/* CTA */}
             <div className="flex flex-wrap gap-4">
                 <a
-                    href="cv/Curriculum-Vitae-Jesus-Garcia.pdf"
+                    href="cv/CV-ESP.pdf"
                     download
                     className="
             inline-flex items-center gap-2
@@ -97,7 +97,21 @@ export default function Development() {
             text-white font-medium
           "
                 >
-                    📄 {t('development.download_cv')}
+                    📄 {t('development.download_cv')} (ESP)
+                </a>
+
+                <a
+                    href="cv/CV-ENG.pdf"
+                    download
+                    className="
+            inline-flex items-center gap-2
+            px-6 py-3 rounded-lg
+            bg-indigo-600 hover:bg-indigo-700
+            transition-colors
+            text-white font-medium
+          "
+                >
+                    📄 {t('development.download_cv')} (ENG)
                 </a>
 
                 <a
