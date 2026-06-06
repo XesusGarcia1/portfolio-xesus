@@ -30,20 +30,20 @@
         "items": {
             "cfe": {
                 "title": "Staff Evaluation System (CFE)",
-                "description": "Development of a web application for the evaluation and management of temporary staff, improving organization and standardization of internal processes.",
-                "role": "Role: Frontend & Backend Development",
+                "description": "Development of full stack web applications using Vue.js and CodeIgniter. Automation of email systems and improvement of internal processes through functional testing.",
+                "role": "Role: Full Stack Developer (Intern)",
                 "confidential": "Internal / confidential project"
             },
             "erp": {
-                "title": "Business ERP Modules",
-                "description": "Development, maintenance and optimization of ERP modules in production, focused on reports, business logic and business process automation.",
-                "role": "Role: Backend Developer",
-                "production_status": "Enterprise project in production"
+                "title": "Custom ERP System — Furniture Business",
+                "description": "Design and development from scratch of an ERP system for a furniture business. Implementation of inventory control, sales management, backend logic, and database for operational support and a web product showcase.",
+                "role": "Role: Full Stack Developer (Freelance)",
+                "production_status": "Real project in production"
             },
             "chatbot": {
                 "title": "AI Chatbot",
                 "name": "AI Chatbot (Prototype)",
-                "description": "Personal project focused on exploring conversational systems, AI integration, and response automation.",
+                "description": "Development of an AI-powered chatbot for conversation automation, integrating APIs and backend logic for dynamic response generation.",
                 "example_desc": "This is a functional example of a modern chat interface with simulated responses.",
                 "bot_name": "Xesus Bot",
                 "online": "Online",
@@ -189,9 +189,9 @@
     },
     "development": {
         "title": "Development",
-        "summary_part1": "I am a Software Developer with experience in Backend, Frontend and ERP system development. Currently working at Evidence Technology, participating in the development, maintenance and optimization of business web applications.",
-        "summary_part2": "My experience includes business logic implementation, advanced features, testing and integration, as well as incident resolution in production environments.",
-        "summary_part3": "I have worked with technologies such as PHP, JavaScript, TypeScript, Python, Node.js, Laravel, CodeIgniter and Vue.js, integrating relational and non-relational databases.",
+        "summary_part1": "I am a Full Stack Developer with solid experience in ERP system design and development, backend development, and database optimization. I focus on building scalable enterprise web applications and solving complex business logic.",
+        "summary_part2": "I have experience developing real-world systems from scratch and automating processes through functional and unit testing. Additionally, I focus on automation using artificial intelligence.",
+        "summary_part3": "I have worked with a wide tech stack including PHP, JavaScript, TypeScript, Python, C#, .NET, Node.js, Laravel, CodeIgniter, Vue.js, and React, integrating relational and non-relational databases like MySQL, PostgreSQL, and MongoDB.",
         "tech_stack_title": "Tech stack",
         "specialization_title": "Areas of specialization",
         "areas": {
