@@ -97,6 +97,23 @@
                 "wip": "In Development",
                 "about_title": "About the Project",
                 "about_desc": "Silent Decay is a first-person psychological horror experience where survival depends on understanding what hunts you and deciphering the rules that govern this hostile environment.",
+                "menu_audio_title": "Main Menu & Audio Atmosphere",
+                "menu_audio_desc": "Experience the visual and sound design of the game's main menu. Turn on the audio to listen to the atmospheric soundtrack designed to immerse the player in the psychological horror experience.",
+                "progress_title": "Development Progress",
+                "progress_subtitle": "Advanced stage of production, refining core features",
+                "maps_title": "Explore Level Designs",
+                "screenshots_title": "Screenshots",
+                "maps": {
+                    "hospital": {
+                        "desc": "An abandoned and claustrophobic clinical environment. Narrow corridors where visibility is minimal and every sound is magnified."
+                    },
+                    "industrial": {
+                        "desc": "Massive warehouses and heavy machinery areas. Open but dark industrial spaces, with dynamic mechanical and environmental hazards."
+                    },
+                    "tunnels": {
+                        "desc": "Underground network of wet and flooded tunnels. Acoustics are your greatest enemy, and the water hides threats lurking beneath the surface."
+                    }
+                },
                 "core_design_title": "Core Design (Enemy Design)",
                 "core_design_desc": "\"Every creature has a rule. Learn it. Survive it.\"",
                 "enemies": {
@@ -136,6 +153,8 @@
                         "desc": "Dynamic data-driven interfaces, configurable menu systems, and internal testing tools to optimize iteration."
                     }
                 },
+                "about_p1": "Silent Decay has been conceived from its foundation as a development environment to test and implement scalable architectures in Unity 6 and C#. It is not just a horror game, but a laboratory for interactive systems development.",
+                "about_p2": "The project focuses on solving gameplay challenges, code stability in complex procedural systems, dynamic interface modularity, and agent optimization with artificial intelligence.",
                 "gallery_title": "Development Gallery",
                 "gallery_desc": "Real screenshots of the Unity inspector, AI design, environments, and gameplay.",
                 "technologies": "Technologies",

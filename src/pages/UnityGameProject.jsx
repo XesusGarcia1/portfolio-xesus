@@ -29,7 +29,7 @@ export default function UnityGameProject() {
                 '/image/silent-decay/Hospital/Hosp1.png',
                 '/image/silent-decay/Hospital/Hosp2.png'
             ],
-            desc: 'Un entorno clínico abandonado y claustrofóbico. Pasillos estrechos donde la visibilidad es mínima y cada sonido se magnifica.'
+            desc: t('projects.items.silent_decay.maps.hospital.desc')
         },
         'Industrial Depot': {
             video: '/image/silent-decay/Industrial Depot/DepIndustrial-v.mp4',
@@ -39,7 +39,7 @@ export default function UnityGameProject() {
                 '/image/silent-decay/Industrial Depot/DepIndustrial3.png',
                 '/image/silent-decay/Industrial Depot/DepIndustrial4.png'
             ],
-            desc: 'Almacenes masivos y zonas de maquinaria pesada. Espacios industriales abiertos pero oscuros, con peligros mecánicos y ambientales dinámicos.'
+            desc: t('projects.items.silent_decay.maps.industrial.desc')
         },
         'Tunnels': {
             video: '/image/silent-decay/Tunnels/Tunn-v.mp4',
@@ -47,7 +47,7 @@ export default function UnityGameProject() {
                 '/image/silent-decay/Tunnels/Tunn1.png',
                 '/image/silent-decay/Tunnels/Tunn2.png'
             ],
-            desc: 'Red subterránea de túneles húmedos e inundados. La acústica es tu mayor enemigo, y el agua oculta amenazas acechando bajo la superficie.'
+            desc: t('projects.items.silent_decay.maps.tunnels.desc')
         }
     }
 
@@ -85,9 +85,11 @@ export default function UnityGameProject() {
                 
                 {/* 2. REPRODUCTOR DE MENÚ PRINCIPAL (Con sonido) */}
                 <div>
-                    <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">Main Menu & Audio Atmosphere</h2>
+                    <h2 className="text-xl md:text-2xl font-bold mb-4 text-white">
+                        {t('projects.items.silent_decay.menu_audio_title')}
+                    </h2>
                     <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
-                        Experimenta el diseño visual y sonoro del menú principal del juego. Activa el audio para escuchar el soundtrack atmosférico diseñado para sumergir al jugador en la experiencia de terror psicológico.
+                        {t('projects.items.silent_decay.menu_audio_desc')}
                     </p>
                     <div className="rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950 aspect-video relative group">
                         <video
@@ -112,8 +114,12 @@ export default function UnityGameProject() {
                     <div className="relative z-10 space-y-4">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                             <div>
-                                <h3 className="font-bold text-white text-lg">Development Progress</h3>
-                                <p className="text-xs text-zinc-500">Advanced stage of production, refining core features</p>
+                                <h3 className="font-bold text-white text-lg">
+                                    {t('projects.items.silent_decay.progress_title')}
+                                </h3>
+                                <p className="text-xs text-zinc-500">
+                                    {t('projects.items.silent_decay.progress_subtitle')}
+                                </p>
                             </div>
                             <div className="text-right">
                                 <span className="text-3xl font-extrabold text-purple-400">80%</span>
@@ -132,7 +138,9 @@ export default function UnityGameProject() {
 
                 {/* 4. EXPLORADOR INTERACTIVO DE MAPAS (Hospital, Industrial, Tunnels) */}
                 <div>
-                    <h2 className="text-2xl font-bold text-white mb-6">Explore Level Designs</h2>
+                    <h2 className="text-2xl font-bold text-white mb-6">
+                        {t('projects.items.silent_decay.maps_title')}
+                    </h2>
                     
                     {/* Botones selectores de mapas */}
                     <div className="flex border-b border-zinc-800 gap-4 mb-8">
@@ -176,7 +184,9 @@ export default function UnityGameProject() {
                             </p>
 
                             <div>
-                                <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">Capturas de pantalla</h4>
+                                <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">
+                                    {t('projects.items.silent_decay.screenshots_title')}
+                                </h4>
                                 <div className="grid grid-cols-2 gap-2">
                                     {mapsData[selectedMap].images.map((img, index) => (
                                         <div 
@@ -253,12 +263,14 @@ export default function UnityGameProject() {
                 {/* 7. FICHA TÉCNICA Y HABILIDADES */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-zinc-900 pt-12">
                     <div className="col-span-2">
-                        <h2 className="text-xl font-bold mb-4 text-white">{t('projects.items.silent_decay.about_title')}</h2>
+                        <h2 className="text-xl font-bold mb-4 text-white">
+                            {t('projects.items.silent_decay.about_title')}
+                        </h2>
                         <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-                            Silent Decay ha sido concebido desde sus bases como un entorno de desarrollo para probar e implementar arquitecturas escalables en Unity 6 y C#. No es solo un juego de terror, sino un laboratorio de desarrollo de sistemas interactivos.
+                            {t('projects.items.silent_decay.about_p1')}
                         </p>
                         <p className="text-zinc-400 text-sm leading-relaxed">
-                            El proyecto se enfoca en resolver desafíos de jugabilidad, estabilidad del código en sistemas procedurales complejos, modularidad de interfaces dinámicas y optimización de agentes con inteligencia artificial.
+                            {t('projects.items.silent_decay.about_p2')}
                         </p>
                     </div>
 
