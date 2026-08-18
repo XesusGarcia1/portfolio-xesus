@@ -21,31 +21,42 @@ export default function Development() {
             </p>
 
             {/* Stack tecnológico */}
-            <div className="mb-14">
+            <div className="mb-14 space-y-6">
                 <h2 className="text-xl font-semibold mb-4">{t('development.tech_stack_title')}</h2>
 
-                <div className="flex flex-wrap gap-3">
-                    {[
-                        'PHP',
-                        'Laravel',
-                        'CodeIgniter',
-                        'JavaScript',
-                        'TypeScript',
-                        'Node.js',
-                        'Vue.js',
-                        'React',
-                        'MySQL',
-                        'PostgreSQL',
-                        'Git',
-                        'Docker',
-                    ].map(skill => (
-                        <span
-                            key={skill}
-                            className="px-4 py-2 rounded-full bg-zinc-800 text-zinc-300 text-sm"
-                        >
-                            {skill}
-                        </span>
-                    ))}
+                <div className="space-y-4">
+                    <div>
+                        <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">Software</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['PHP', 'Laravel', 'JavaScript', 'TypeScript', 'Node.js', 'Vue.js', 'React', 'C#', '.NET'].map(skill => (
+                                <span key={skill} className="px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">Databases & Tools</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['MySQL', 'PostgreSQL', 'Git', 'Docker'].map(skill => (
+                                <span key={skill} className="px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">Game Development</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {['Unity 6', 'C#', 'Game AI', 'FSM', 'NavMesh', 'Unity Input System'].map(skill => (
+                                <span key={skill} className="px-3.5 py-1.5 rounded-full bg-purple-950/40 border border-purple-800/40 text-purple-300 text-xs">
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -89,13 +100,7 @@ export default function Development() {
                 <a
                     href="cv/CV-ESP.pdf"
                     download
-                    className="
-            inline-flex items-center gap-2
-            px-6 py-3 rounded-lg
-            bg-indigo-600 hover:bg-indigo-700
-            transition-colors
-            text-white font-medium
-          "
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-medium"
                 >
                     📄 {t('development.download_cv')} (ESP)
                 </a>
@@ -103,25 +108,22 @@ export default function Development() {
                 <a
                     href="cv/CV-ENG.pdf"
                     download
-                    className="
-            inline-flex items-center gap-2
-            px-6 py-3 rounded-lg
-            bg-indigo-600 hover:bg-indigo-700
-            transition-colors
-            text-white font-medium
-          "
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-700 transition-colors text-white font-medium"
                 >
                     📄 {t('development.download_cv')} (ENG)
                 </a>
 
                 <a
+                    href="cv/CP-ESP.pdf"
+                    download
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-purple-600 hover:bg-purple-700 transition-colors text-white font-medium"
+                >
+                    ✉️ {t('development.download_cp')} (ESP)
+                </a>
+
+                <a
                     href="/proyectos"
-                    className="
-            px-6 py-3 rounded-lg
-            border border-zinc-700
-            hover:bg-zinc-800
-            transition
-          "
+                    className="px-6 py-3 rounded-lg border border-zinc-700 hover:bg-zinc-800 transition"
                 >
                     {t('development.view_projects')}
                 </a>

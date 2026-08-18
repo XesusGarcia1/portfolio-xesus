@@ -11,6 +11,7 @@ export default function Navbar() {
         { to: '/', label: t('nav.home') },
         { to: '/desarrollo', label: t('nav.development') },
         { to: '/proyectos', label: t('nav.projects') },
+        { to: '/proyectos/silent-decay', label: t('nav.gamedev') },
         { to: '/musica', label: t('nav.music') },
         { to: '/logros', label: t('nav.achievements') },
         { to: '/contacto', label: t('nav.contact') },

@@ -3,28 +3,32 @@
         "home": "Inicio",
         "development": "Desarrollo",
         "projects": "Proyectos",
+        "gamedev": "Game Dev",
         "music": "Música",
         "achievements": "Logros",
         "contact": "Contacto"
     },
     "footer": {
-        "rights": "© {{year}} Xesus Garcia — Desarrollo & Música"
+        "rights": "© {{year}} Xesus Garcia — Software Development · Game Development · Music"
     },
     "home": {
-        "title_part1": "Desarrollador Web &",
-        "title_part2": "Creador Musical",
-        "description": "Construyo soluciones web modernas y desarrollo proyectos creativos combinando tecnología y música electrónica.",
-        "view_projects": "Ver proyectos",
-        "listen_music": "Escuchar música"
+        "title_part1": "Full Stack Developer ·",
+        "title_part2": "Game Developer · Music Producer",
+        "description": "Construyo sistemas de software, videojuegos y proyectos creativos combinando tecnología y música.",
+        "view_software": "Software",
+        "view_silent_decay": "Silent Decay",
+        "view_music": "Música"
     },
     "projects": {
         "title": "Proyectos",
         "description": "Una selección de proyectos profesionales y personales en los que he trabajado, enfocados en desarrollo web, sistemas empresariales e iniciativas creativas.",
+        "featured_title": "Proyecto destacado",
         "professional_title": "Proyectos profesionales",
         "personal_title": "Proyectos personales",
         "gamedev_title": "Game Dev & Experimentos",
         "view_details": "Ver detalles",
         "view_evidence": "Ver evidencia",
+        "view_development_details": "Ver desarrollo",
         "back_to_projects": "← Volver a proyectos",
         "mind_project": "¿Tienes un proyecto en mente?",
         "items": {
@@ -85,25 +89,65 @@
                     }
                 }
             },
-            "unity": {
-                "title": "Videojuego en Unity — En desarrollo",
-                "name": "Videojuego en Unity",
-                "description": "Proyecto personal de videojuego desarrollado en Unity, enfocado en mecánicas de juego, control de estados, lógica de colisiones y arquitectura de sistemas.",
-                "demo_desc": "Demostración técnica de mecánicas, sistemas y arquitectura desarrollados en C# para Unity. Este proyecto se centra en la solidez del código y la fluidez de las interacciones.",
-                "status": "Estado: En desarrollo continuo (sin fecha definida)",
-                "wip": "Work in Progress",
-                "about_title": "Sobre el desarrollo",
-                "about_p1": "Este proyecto corresponde a un videojuego experimental desarrollado en Unity como parte de mi proceso de aprendizaje en Game Development. No se trata de un producto final ni cuenta con una fecha de lanzamiento definida; su propósito principal es la exploración técnica, el diseño de sistemas y la aplicación de buenas prácticas en C# dentro del motor.",
-                "about_p2": "Este proyecto fue concebido como un entorno de prueba y aprendizaje continuo, enfocado en experimentar con arquitecturas escalables y mantenibles dentro de Unity. El objetivo no es la finalización del videojuego como producto, sino la implementación y validación de sistemas fundamentales utilizados en el desarrollo de videojuegos.",
+            "silent_decay": {
+                "title": "SILENT DECAY",
+                "subtitle": "Psychological Horror Game",
+                "description": "Videojuego de terror psicológico desarrollado desde cero bajo el sello de XEVORA. Actualmente en etapa avanzada de desarrollo.",
+                "status": "Estado: Desarrollo Avanzado (80%)",
+                "wip": "En Desarrollo",
+                "about_title": "Sobre el Proyecto",
+                "about_desc": "Silent Decay es una experiencia de terror psicológico en primera persona en la que la supervivencia depende de comprender qué es lo que te acecha y descifrar las reglas que gobiernan este entorno hostil.",
+                "core_design_title": "Core Design (Diseño de Enemigos)",
+                "core_design_desc": "\"Cada criatura tiene una regla. Conócela. Sobrevive.\"",
+                "enemies": {
+                    "bookhead": {
+                        "name": "Bookhead",
+                        "desc": "Criatura que se guía por estímulos visuales directos. La observación fija altera su comportamiento hostil."
+                    },
+                    "rastrero": {
+                        "name": "El Rastrero",
+                        "desc": "Acechador veloz de las sombras que responde inmediatamente a cualquier ruido o vibración ambiental."
+                    },
+                    "phenomen": {
+                        "name": "Phenomen",
+                        "desc": "Entidad que distorsiona la realidad y la cordura a su alrededor. El contacto visual prolongado es mortal."
+                    },
+                    "replica": {
+                        "name": "La Réplica",
+                        "desc": "Enemigo que mimetiza sonidos y comportamientos para confundir al jugador y guiarlo a trampas."
+                    }
+                },
+                "technical_title": "Desarrollo Técnico (Technical Development)",
+                "technical_areas": {
+                    "ai": {
+                        "title": "AI & Enemy Systems",
+                        "desc": "IA basada en FSM (Finite State Machines), navegación avanzada NavMesh, cálculo de FOV dinámico con raycasting y comportamientos únicos para cada criatura."
+                    },
+                    "world": {
+                        "title": "World Generation",
+                        "desc": "Generación procedimental y modular de escenarios, algoritmos de validación de conectividad espacial y eventos dinámicos del entorno."
+                    },
+                    "gameplay": {
+                        "title": "Gameplay",
+                        "desc": "Mecánicas de cordura, sigilo, detección de ruido, interacciones físicas del entorno y puzles complejos integrados."
+                    },
+                    "ui": {
+                        "title": "UI & Tools",
+                        "desc": "Interfaces dinámicas basadas en datos, sistema configurable de menús y herramientas internas de prueba para optimizar la iteración."
+                    }
+                },
+                "gallery_title": "Galería de Desarrollo",
+                "gallery_desc": "Capturas reales del inspector de Unity, diseño de IA, escenarios y jugabilidad.",
                 "technologies": "Tecnologías",
                 "skills": "Habilidades Aplicadas",
                 "skills_items": [
-                    "Programación Orientada a Objetos",
-                    "State Machines & Managers",
-                    "UI / UX en Juegos"
+                    "Diseño de IA avanzada (FSM)",
+                    "NavMesh y Cálculo de Visión (FOV)",
+                    "Estructura y Arquitectura C# en Unity 6",
+                    "Diseño de Sistemas y Lógica de Gameplay"
                 ],
-                "cta_title": "¿Quieres saber más sobre la arquitectura?",
-                "cta_desc": "Estoy abierto a discutir decisiones técnicas y colaboraciones en Game Dev.",
+                "cta_title": "¿Quieres saber más sobre la arquitectura del juego?",
+                "cta_desc": "Estoy abierto a discutir decisiones técnicas, modularidad de código y colaboraciones en Game Dev.",
                 "cta_button": "Hablemos"
             }
         }
@@ -161,15 +205,15 @@
     },
     "music": {
         "title": "Música",
-        "description": "Bajo el nombre artístico Xesus Garcia, desarrollo y produzco música electrónica con un enfoque energético, oscuro y moderno. Mi trabajo combina ritmo, potencia y atmósferas intensas, orientadas tanto a la escucha activa como a contenido audiovisual.",
+        "description": "Bajo el nombre artístico Xesus Garcia, desarrollo y produzco música electrónica con un enfoque energético, oscuro y moderno. Además, diseño y compongo bandas sonoras originales, incluyendo la OST oficial de Silent Decay, conectando la música con la atmósfera interactiva de los videojuegos.",
         "styles_title": "Estilos y géneros",
         "what_i_do_title": "Qué hago",
         "what_i_do_desc": "Me especializo en la creación de tracks originales, remixes y producciones instrumentales, con énfasis en bajos contundentes, cowbells, drops agresivos y estructuras pensadas para:",
         "what_i_do_items": [
+            "Banda Sonora & Audio para Videojuegos (Silent Decay OST)",
             "Edits de drift y automovilismo",
             "Contenido para gimnasio y entrenamiento",
-            "Videos cortos (TikTok, Reels, Shorts)",
-            "Presentaciones y sets energéticos"
+            "Videos cortos (TikTok, Reels, Shorts)"
         ],
         "featured_tracks": "Tracks Destacados",
         "featured_tracks_direct": "Reproducción directa disponible",
@@ -213,6 +257,7 @@
             }
         },
         "download_cv": "Descargar CV",
+        "download_cp": "Descargar Carta de Presentación",
         "view_projects": "Ver proyectos"
     }
 }

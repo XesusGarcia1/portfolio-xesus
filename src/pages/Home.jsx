@@ -45,7 +45,7 @@ export default function Home() {
                     className="flex flex-wrap justify-center gap-4"
                 >
                     <a
-                        href="/proyectos"
+                        href="/desarrollo"
                         className="
               px-7 py-3 rounded-xl
               bg-linear-to-r from-indigo-600 to-indigo-500
@@ -55,7 +55,21 @@ export default function Home() {
               shadow-lg shadow-indigo-600/30
             "
                     >
-                        {t('home.view_projects')}
+                        💻 {t('home.view_software')}
+                    </a>
+
+                    <a
+                        href="/proyectos/silent-decay"
+                        className="
+              px-7 py-3 rounded-xl
+              bg-linear-to-r from-purple-600 to-purple-500
+              hover:from-purple-500 hover:to-purple-600
+              transition-all duration-300
+              text-white font-medium
+              shadow-lg shadow-purple-600/30
+            "
+                    >
+                        🎮 {t('home.view_silent_decay')}
                     </a>
 
                     <a
@@ -67,7 +81,7 @@ export default function Home() {
               transition-all duration-300
             "
                     >
-                        {t('home.listen_music')}
+                        🎵 {t('home.view_music')}
                     </a>
                 </motion.div>
             </div>

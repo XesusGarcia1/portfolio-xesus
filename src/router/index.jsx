@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             { path: 'contacto', element: <Contact /> },
             { path: 'proyectos/chatbot', element: <ChatbotProject /> },
             { path: 'proyectos/portafolio', element: <PortfolioProject /> },
-            { path: 'proyectos/unity-game', element: <UnityGameProject /> },
+            { path: 'proyectos/silent-decay', element: <UnityGameProject /> },
         ],
     },
 ])

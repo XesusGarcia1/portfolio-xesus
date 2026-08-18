@@ -3,28 +3,32 @@
         "home": "Home",
         "development": "Development",
         "projects": "Projects",
+        "gamedev": "Game Dev",
         "music": "Music",
         "achievements": "Achievements",
         "contact": "Contact"
     },
     "footer": {
-        "rights": "© {{year}} Xesus Garcia — Development & Music"
+        "rights": "© {{year}} Xesus Garcia — Software Development · Game Development · Music"
     },
     "home": {
-        "title_part1": "Web Developer &",
-        "title_part2": "Music Creator",
-        "description": "I build modern web solutions and develop creative projects combining technology and electronic music.",
-        "view_projects": "View projects",
-        "listen_music": "Listen music"
+        "title_part1": "Full Stack Developer ·",
+        "title_part2": "Game Developer · Music Producer",
+        "description": "I build software systems, video games, and creative projects combining technology and music.",
+        "view_software": "Software",
+        "view_silent_decay": "Silent Decay",
+        "view_music": "Music"
     },
     "projects": {
         "title": "Projects",
         "description": "A selection of professional and personal projects I've worked on, focused on web development, business systems, and creative initiatives.",
-        "professional_title": "Professional projects",
-        "personal_title": "Personal projects",
+        "featured_title": "Featured Project",
+        "professional_title": "Professional Projects",
+        "personal_title": "Personal Projects",
         "gamedev_title": "Game Dev & Experiments",
         "view_details": "View details",
         "view_evidence": "View evidence",
+        "view_development_details": "View Development",
         "back_to_projects": "← Back to projects",
         "mind_project": "Do you have a project in mind?",
         "items": {
@@ -85,25 +89,65 @@
                     }
                 }
             },
-            "unity": {
-                "title": "Unity Video Game — In development",
-                "name": "Unity Video Game",
-                "description": "Personal video game project developed in Unity, focused on game mechanics, state control, collision logic, and systems architecture.",
-                "demo_desc": "Technical demonstration of mechanics, systems and architecture developed in C# for Unity. This project focuses on code solidity and interaction fluidity.",
-                "status": "Status: In continuous development (no date set)",
-                "wip": "Work in Progress",
-                "about_title": "About the development",
-                "about_p1": "This project corresponds to an experimental video game developed in Unity as part of my learning process in Game Development. It is not a final product nor does it have a set release date; its main purpose is technical exploration, systems design, and the application of best practices in C# within the engine.",
-                "about_p2": "This project was conceived as a testing and continuous learning environment, focused on experimenting with scalable and maintainable architectures within Unity. The goal is not the completion of the video game as a product, but the implementation and validation of fundamental systems used in video game development.",
+            "silent_decay": {
+                "title": "SILENT DECAY",
+                "subtitle": "Psychological Horror Game",
+                "description": "Psychological horror video game developed from scratch under the XEVORA label. Currently in advanced development stage.",
+                "status": "Status: Advanced Development (80%)",
+                "wip": "In Development",
+                "about_title": "About the Project",
+                "about_desc": "Silent Decay is a first-person psychological horror experience where survival depends on understanding what hunts you and deciphering the rules that govern this hostile environment.",
+                "core_design_title": "Core Design (Enemy Design)",
+                "core_design_desc": "\"Every creature has a rule. Learn it. Survive it.\"",
+                "enemies": {
+                    "bookhead": {
+                        "name": "Bookhead",
+                        "desc": "A creature guided by direct visual stimuli. Steady observation alters its hostile behavior."
+                    },
+                    "rastrero": {
+                        "name": "El Rastrero",
+                        "desc": "A fast shadow stalker that responds immediately to any environmental noise or vibration."
+                    },
+                    "phenomen": {
+                        "name": "Phenomen",
+                        "desc": "An entity that distorts reality and sanity around it. Prolonged visual contact is lethal."
+                    },
+                    "replica": {
+                        "name": "La Réplica",
+                        "desc": "An enemy that mimics sounds and behaviors to confuse the player and lead them into traps."
+                    }
+                },
+                "technical_title": "Technical Development",
+                "technical_areas": {
+                    "ai": {
+                        "title": "AI & Enemy Systems",
+                        "desc": "AI based on FSM (Finite State Machines), advanced NavMesh navigation, dynamic FOV calculation with raycasting, and unique behaviors for each creature."
+                    },
+                    "world": {
+                        "title": "World Generation",
+                        "desc": "Modular and procedural generation of levels, spatial connectivity validation algorithms, and dynamic environmental events."
+                    },
+                    "gameplay": {
+                        "title": "Gameplay",
+                        "desc": "Sanity mechanics, stealth, noise detection, physical environment interactions, and complex integrated puzzles."
+                    },
+                    "ui": {
+                        "title": "UI & Tools",
+                        "desc": "Dynamic data-driven interfaces, configurable menu systems, and internal testing tools to optimize iteration."
+                    }
+                },
+                "gallery_title": "Development Gallery",
+                "gallery_desc": "Real screenshots of the Unity inspector, AI design, environments, and gameplay.",
                 "technologies": "Technologies",
                 "skills": "Skills Applied",
                 "skills_items": [
-                    "Object Oriented Programming",
-                    "State Machines & Managers",
-                    "UI / UX in Games"
+                    "Advanced AI Design (FSM)",
+                    "NavMesh & Field of View (FOV) Calculation",
+                    "C# Structure & Architecture in Unity 6",
+                    "Systems Design & Gameplay Logic"
                 ],
-                "cta_title": "Do you want to know more about the architecture?",
-                "cta_desc": "I am open to discussing technical decisions and collaborations in Game Dev.",
+                "cta_title": "Do you want to know more about the game's architecture?",
+                "cta_desc": "I am open to discussing technical decisions, code modularity, and collaborations in Game Dev.",
                 "cta_button": "Let's talk"
             }
         }
@@ -161,15 +205,15 @@
     },
     "music": {
         "title": "Music",
-        "description": "Under the artistic name Xesus Garcia, I develop and produce electronic music with an energetic, dark and modern focus. My work combines rhythm, power and intense atmospheres, oriented to both active listening and audiovisual content.",
+        "description": "Under the artistic name Xesus Garcia, I develop and produce electronic music with an energetic, dark, and modern focus. Additionally, I design and compose original soundtracks, including the official Silent Decay OST, connecting music with the interactive atmosphere of video games.",
         "styles_title": "Styles & genres",
         "what_i_do_title": "What I do",
         "what_i_do_desc": "I specialize in creating original tracks, remixes and instrumental productions, with emphasis on punchy bass, cowbells, aggressive drops and structures designed for:",
         "what_i_do_items": [
+            "Soundtrack & Audio Design for Games (Silent Decay OST)",
             "Drift and automotive edits",
             "Gym and workout content",
-            "Short videos (TikTok, Reels, Shorts)",
-            "Energetic performances and sets"
+            "Short videos (TikTok, Reels, Shorts)"
         ],
         "featured_tracks": "Featured Tracks",
         "featured_tracks_direct": "Direct playback available",
@@ -213,6 +257,7 @@
             }
         },
         "download_cv": "Download CV",
+        "download_cp": "Download Cover Letter",
         "view_projects": "View projects"
     }
 }
