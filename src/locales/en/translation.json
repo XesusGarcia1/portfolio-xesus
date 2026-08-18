@@ -102,19 +102,19 @@
                 "enemies": {
                     "bookhead": {
                         "name": "Bookhead",
-                        "desc": "A creature guided by direct visual stimuli. Steady observation alters its hostile behavior."
+                        "desc": "A methodical hunter equipped with conical raycasting vision. Reacts to movement noise and silently inspects the player's last known positions."
                     },
                     "rastrero": {
                         "name": "El Rastrero",
-                        "desc": "A fast shadow stalker that responds immediately to any environmental noise or vibration."
+                        "desc": "A twilight stalker that leaves a dynamic trail of fluids in its path. Aggressive in the dark, but retreats to the shadows when illuminated directly by the flashlight."
                     },
                     "phenomen": {
                         "name": "Phenomen",
-                        "desc": "An entity that distorts reality and sanity around it. Prolonged visual contact is lethal."
+                        "desc": "A psychotropic entity that distorts sanity and the environment. Triggers visual hallucinations and procedural environmental events that progressively degrade the player's mind."
                     },
                     "replica": {
                         "name": "La Réplica",
-                        "desc": "An enemy that mimics sounds and behaviors to confuse the player and lead them into traps."
+                        "desc": "An entity of progressive metamorphosis (inert mannequin to biomechanical monster). Stalks and strategically relocates on the map only when the player breaks visual contact."
                     }
                 },
                 "technical_title": "Technical Development",

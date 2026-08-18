@@ -298,7 +298,7 @@ export default function UnityGameProject() {
                     <p className="text-sm text-zinc-400 mb-6">{t('projects.items.silent_decay.cta_desc')}</p>
                     <a
                         href="/contacto"
-                        className="inline-block px-6 py-2.5 bg-white text-zinc-955 rounded-xl font-bold hover:bg-zinc-200 transition text-xs"
+                        className="inline-block px-6 py-2.5 bg-white text-zinc-950 rounded-xl font-bold hover:bg-zinc-200 transition text-xs"
                     >
                         {t('projects.items.silent_decay.cta_button')}
                     </a>

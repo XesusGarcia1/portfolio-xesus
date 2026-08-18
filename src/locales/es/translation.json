@@ -99,22 +99,22 @@
                 "about_desc": "Silent Decay es una experiencia de terror psicológico en primera persona en la que la supervivencia depende de comprender qué es lo que te acecha y descifrar las reglas que gobiernan este entorno hostil.",
                 "core_design_title": "Core Design (Diseño de Enemigos)",
                 "core_design_desc": "\"Cada criatura tiene una regla. Conócela. Sobrevive.\"",
-                "enemies": {
+                 "enemies": {
                     "bookhead": {
                         "name": "Bookhead",
-                        "desc": "Criatura que se guía por estímulos visuales directos. La observación fija altera su comportamiento hostil."
+                        "desc": "Cazador metódico dotado de visión cónica por raycasting. Reacciona a los ruidos de movimiento e inspecciona silenciosamente las últimas posiciones conocidas del jugador."
                     },
                     "rastrero": {
                         "name": "El Rastrero",
-                        "desc": "Acechador veloz de las sombras que responde inmediatamente a cualquier ruido o vibración ambiental."
+                        "desc": "Acechador de la penumbra que deja un rastro dinámico de fluidos a su paso. Agresivo en la oscuridad, pero se repliega a las sombras al ser enfocado directamente por la linterna."
                     },
                     "phenomen": {
                         "name": "Phenomen",
-                        "desc": "Entidad que distorsiona la realidad y la cordura a su alrededor. El contacto visual prolongado es mortal."
+                        "desc": "Entidad psicotrópica que altera la cordura y el entorno. Desencadena alucinaciones visuales y eventos ambientales procedurales que degradan progresivamente la mente del jugador."
                     },
                     "replica": {
                         "name": "La Réplica",
-                        "desc": "Enemigo que mimetiza sonidos y comportamientos para confundir al jugador y guiarlo a trampas."
+                        "desc": "Entidad de metamorfosis progresiva (Maniquí inerte a Monstruo biomecánico). Acecha y se recoloca estratégicamente en el mapa únicamente cuando el jugador interrumpe el contacto visual."
                     }
                 },
                 "technical_title": "Desarrollo Técnico (Technical Development)",
