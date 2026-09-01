@@ -125,7 +125,7 @@
                 "screenshots_title": "Screenshots",
                 "maps": {
                     "hospital": {
-                        "desc": "An abandoned and claustrophobic clinical environment. Narrow corridors where visibility is minimal and every sound is magnified."
+                        "desc": "Abandoned, claustrophobic clinical environment dominated by 'The Amalgam'. Narrow corridors with minimal visibility and flickering lights where you must recover 7 code notes while dodging relentless stalks."
                     },
                     "industrial": {
                         "desc": "Massive warehouses and heavy machinery areas. Open but dark industrial spaces, with dynamic mechanical and environmental hazards."
@@ -137,13 +137,9 @@
                 "core_design_title": "Core Design (Enemy Design)",
                 "core_design_desc": "\"Every creature has a rule. Learn it. Survive it.\"",
                 "enemies": {
-                    "bookhead": {
-                        "name": "Bookhead",
-                        "desc": "A methodical hunter equipped with conical raycasting vision. Reacts to movement noise and silently inspects the player's last known positions."
-                    },
-                    "rastrero": {
-                        "name": "El Rastrero",
-                        "desc": "A twilight stalker that leaves a dynamic trail of fluids in its path. Aggressive in the dark, but retreats to the shadows when illuminated directly by the flashlight."
+                    "amalgam": {
+                        "name": "The Amalgam",
+                        "desc": "Grotesque Hospital entity born from the biological fusion of multiple bodies. Driven by a modular 4-state FSM (3D Crying Idle, Warning bone cracks, Ferocious Chase, and Lethal Jumpscare Attack). Deploys 'Hallway Paranoia' by projecting shadow illusions that dissolve upon approach, instantly materializing the real monster to ambush the player. Aggressiveness scales as notes are collected or subgenerators are powered."
                     },
                     "phenomen": {
                         "name": "Phenomen",

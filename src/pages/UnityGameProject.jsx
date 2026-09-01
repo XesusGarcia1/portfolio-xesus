@@ -85,8 +85,7 @@ export default function UnityGameProject() {
     }
 
     const enemies = [
-        { key: 'bookhead', emoji: '👁️' },
-        { key: 'rastrero', emoji: '👣' },
+        { key: 'amalgam', emoji: '👹' },
         { key: 'phenomen', emoji: '🌀' },
         { key: 'replica', emoji: '🗣️' }
     ]

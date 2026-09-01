@@ -125,7 +125,7 @@
                 "screenshots_title": "Capturas de pantalla",
                 "maps": {
                     "hospital": {
-                        "desc": "Un entorno clínico abandonado y claustrofóbico. Pasillos estrechos donde la visibilidad es mínima y cada sonido se magnifica."
+                        "desc": "Entorno clínico abandonado y claustrofóbico dominado por 'The Amalgam'. Pasillos estrechos donde la visibilidad es mínima, las luces parpadean ante fallos eléctricos y debes recuperar 7 notas de código evitando ser cazado."
                     },
                     "industrial": {
                         "desc": "Almacenes masivos y zonas de maquinaria pesada. Espacios industriales abiertos pero oscuros, con peligros mecánicos y ambientales dinámicos."
@@ -137,13 +137,9 @@
                 "core_design_title": "Core Design (Diseño de Enemigos)",
                 "core_design_desc": "\"Cada criatura tiene una regla. Conócela. Sobrevive.\"",
                  "enemies": {
-                    "bookhead": {
-                        "name": "Bookhead",
-                        "desc": "Cazador metódico dotado de visión cónica por raycasting. Reacciona a los ruidos de movimiento e inspecciona silenciosamente las últimas posiciones conocidas del jugador."
-                    },
-                    "rastrero": {
-                        "name": "El Rastrero",
-                        "desc": "Acechador de la penumbra que deja un rastro dinámico de fluidos a su paso. Agresivo en la oscuridad, pero se repliega a las sombras al ser enfocado directamente por la linterna."
+                    "amalgam": {
+                        "name": "The Amalgam (La Amalgama)",
+                        "desc": "Entidad grotesca del Hospital surgida de la fusión de múltiples cuerpos. Operada por una FSM modular de 4 estados (Idle/Llanto 3D, Advertencia con crujido de huesos, Persecución feroz y Ataque letal). Implementa 'Paranoia de Pasillo' desplegando espejismos sombríos que se disuelven para materializar al monstruo real a quemarropa. Su agresividad escala dinámicamente al recoger notas o activar generadores."
                     },
                     "phenomen": {
                         "name": "Phenomen",
