@@ -19,17 +19,17 @@ export default function UnityGameProject() {
     const [captchaError, setCaptchaError] = useState(false)
     const [downloadCounts, setDownloadCounts] = useState({ pc: 14, android: 8 })
 
-    // Imágenes para la cuadrícula 3x3 del reto de Google reCAPTCHA
+    // Imágenes reales de tráfico urbano y semáforos para el reto de Google reCAPTCHA
     const challengeImages = [
-        '/image/silent-decay/Hospital/Hosp1.png',
-        '/image/silent-decay/Industrial Depot/DepIndustrial1.png',
-        '/image/silent-decay/Tunnels/Tunn1.png',
-        '/image/silent-decay/Hospital/Hosp2.png',
-        '/image/silent-decay/Industrial Depot/DepIndustrial2.png',
-        '/image/silent-decay/Tunnels/Tunn2.png',
-        '/image/silent-decay/Industrial Depot/DepIndustrial3.png',
-        '/image/silent-decay/Industrial Depot/DepIndustrial4.png',
-        '/image/silent-decay/Hospital/Hosp1.png'
+        'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=300&q=80',
+        'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=300&q=80'
     ]
 
     // Cargar y sincronizar el contador de descargas (API remota con fallback a localStorage)
