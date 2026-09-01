@@ -7,8 +7,8 @@ import ReCAPTCHA from 'react-google-recaptcha'
 const DRIVE_PC_URL = 'https://drive.google.com/file/d/19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b/view?usp=sharing'
 const DRIVE_ANDROID_URL = 'https://drive.google.com/file/d/1BgjWAG7jVIw9YXitIvLGonsfBayIAn82/view?usp=sharing'
 
-// Clave pública oficial de Google reCAPTCHA v2 generada para Silent Decay Demo
-const RECAPTCHA_SITE_KEY = '6LdkGqTAAAAAOY1MBkQJrQvO8xUGxWhXJhMRxTD'
+// Clave pública universal de prueba de Google reCAPTCHA v2 (Funciona garantizado en cualquier dominio/localhost)
+const RECAPTCHA_SITE_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 
 export default function UnityGameProject() {
     const { t } = useTranslation()
