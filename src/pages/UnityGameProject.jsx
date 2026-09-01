@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import ReCAPTCHA from 'react-google-recaptcha'
 
-// URLs configurables de Google Drive para la Demo
+// URLs configurables de Google Drive para la Demo (Links reales colocados por el usuario)
 const DRIVE_PC_URL = 'https://drive.google.com/file/d/19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b/view?usp=sharing'
 const DRIVE_ANDROID_URL = 'https://drive.google.com/file/d/1BgjWAG7jVIw9YXitIvLGonsfBayIAn82/view?usp=sharing'
+
+// Clave pública de prueba oficial de Google reCAPTCHA v2 (Válida en cualquier dominio / localhost)
+const RECAPTCHA_SITE_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 
 export default function UnityGameProject() {
     const { t } = useTranslation()
@@ -14,23 +18,9 @@ export default function UnityGameProject() {
     // Estados para el Modal Google reCAPTCHA y Contador de Descargas
     const [downloadModalOpen, setDownloadModalOpen] = useState(false)
     const [downloadPlatform, setDownloadPlatform] = useState(null) // 'pc' | 'android'
-    const [recaptchaState, setRecaptchaState] = useState('idle') // 'idle' | 'loading' | 'challenge' | 'verified'
-    const [selectedSquares, setSelectedSquares] = useState([])
+    const [recaptchaToken, setRecaptchaToken] = useState(null)
     const [captchaError, setCaptchaError] = useState(false)
     const [downloadCounts, setDownloadCounts] = useState({ pc: 14, android: 8 })
-
-    // Imágenes reales de tráfico urbano y semáforos para el reto de Google reCAPTCHA
-    const challengeImages = [
-        'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=300&q=80',
-        'https://images.unsplash.com/photo-1517649763962-0c623266010b?auto=format&fit=crop&w=300&q=80'
-    ]
 
     // Cargar y sincronizar el contador de descargas (API remota con fallback a localStorage)
     useEffect(() => {
@@ -60,39 +50,14 @@ export default function UnityGameProject() {
 
     const handleOpenDownload = (platform) => {
         setDownloadPlatform(platform)
-        setRecaptchaState('idle')
-        setSelectedSquares([])
+        setRecaptchaToken(null)
         setCaptchaError(false)
         setDownloadModalOpen(true)
     }
 
-    const handleRecaptchaCheckboxClick = () => {
-        if (recaptchaState === 'verified') return
-        setRecaptchaState('loading')
-        setCaptchaError(false)
-        setTimeout(() => {
-            setRecaptchaState('challenge')
-        }, 800)
-    }
-
-    const toggleSquareSelection = (index) => {
-        setSelectedSquares(prev =>
-            prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-        )
-    }
-
-    const handleVerifyChallenge = () => {
-        if (selectedSquares.length > 0) {
-            setRecaptchaState('verified')
-            setCaptchaError(false)
-        } else {
-            setCaptchaError(true)
-        }
-    }
-
     const handleConfirmDownload = (e) => {
         e.preventDefault()
-        if (recaptchaState !== 'verified') {
+        if (!recaptchaToken) {
             setCaptchaError(true)
             return
         }
@@ -111,7 +76,7 @@ export default function UnityGameProject() {
         // Incrementar en servidor global
         fetch(`https://api.counterapi.dev/v1/xesus-garcia-portfolio/${targetKey}/up`).catch(() => { })
 
-        // Iniciar descarga / abrir Google Drive
+        // Iniciar descarga / abrir Google Drive con el enlace real del usuario
         const targetUrl = isPc ? DRIVE_PC_URL : DRIVE_ANDROID_URL
         window.open(targetUrl, '_blank')
 
@@ -517,7 +482,7 @@ export default function UnityGameProject() {
                 </div>
             </div>
 
-            {/* MODAL GOOGLE reCAPTCHA (Diseño idéntico a Google reCAPTCHA v2) */}
+            {/* MODAL GOOGLE reCAPTCHA OFICIAL (Servido directamente por los servidores de Google) */}
             <AnimatePresence>
                 {downloadModalOpen && (
                     <motion.div
@@ -539,8 +504,8 @@ export default function UnityGameProject() {
                                 ✕
                             </button>
 
-                            <div className="space-y-2">
-                                <div className="flex items-center gap-2">
+                            <div className="space-y-2 text-center md:text-left">
+                                <div className="flex items-center gap-2 justify-center md:justify-start">
                                     <span className="p-2 bg-blue-500/10 border border-blue-500/20 rounded-xl text-blue-400 text-lg">🛡️</span>
                                     <h3 className="font-bold text-white text-lg">{t('projects.items.silent_decay.demo.captcha_modal_title')}</h3>
                                 </div>
@@ -549,97 +514,19 @@ export default function UnityGameProject() {
                                 </p>
                             </div>
 
-                            {/* WIDGET OFICIAL DE GOOGLE reCAPTCHA v2 ("I'm not a robot") */}
-                            <div className="space-y-4">
-                                <div className="bg-[#f9f9f9] border border-[#d3d3d3] rounded-md p-3.5 shadow-md text-zinc-800 flex items-center justify-between max-w-[310px] mx-auto select-none">
-                                    <div className="flex items-center gap-3">
-                                        <button
-                                            type="button"
-                                            onClick={handleRecaptchaCheckboxClick}
-                                            disabled={recaptchaState === 'loading' || recaptchaState === 'verified'}
-                                            className="w-7 h-7 bg-white border-2 border-[#c1c1c1] rounded-xs flex items-center justify-center cursor-pointer hover:border-[#a6a6a6] transition relative"
-                                        >
-                                            {recaptchaState === 'loading' && (
-                                                <div className="w-4 h-4 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
-                                            )}
-                                            {recaptchaState === 'verified' && (
-                                                <span className="text-green-600 font-extrabold text-xl leading-none">✓</span>
-                                            )}
-                                        </button>
-                                        <span className="text-xs font-semibold text-[#222]">
-                                            {t('projects.items.silent_decay.demo.recaptcha_label')}
-                                        </span>
-                                    </div>
-
-                                    <div className="flex flex-col items-center justify-center pl-3 border-l border-zinc-300">
-                                        <div className="w-8 h-8 text-[#4A90E2] flex items-center justify-center">
-                                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                                                <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8z" />
-                                                <path d="M12 6a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4V6z" />
-                                            </svg>
-                                        </div>
-                                        <span className="text-[9px] font-bold text-[#555] tracking-tight">reCAPTCHA</span>
-                                        <div className="flex gap-1 text-[7px] text-[#777]">
-                                            <span className="hover:underline cursor-pointer">Privacy</span>
-                                            <span>-</span>
-                                            <span className="hover:underline cursor-pointer">Terms</span>
-                                        </div>
-                                    </div>
+                            {/* COMPONENTE OFICIAL DE GOOGLE reCAPTCHA (Carga directa desde Google API) */}
+                            <div className="space-y-4 flex flex-col items-center">
+                                <div className="bg-zinc-900/80 p-3 rounded-2xl border border-zinc-800 shadow-inner flex justify-center w-full overflow-hidden">
+                                    <ReCAPTCHA
+                                        sitekey={RECAPTCHA_SITE_KEY}
+                                        theme="dark"
+                                        onChange={(token) => {
+                                            setRecaptchaToken(token)
+                                            setCaptchaError(false)
+                                        }}
+                                        onExpired={() => setRecaptchaToken(null)}
+                                    />
                                 </div>
-
-                                {/* RETO INTERACTIVO EN CUADRÍCULA 3X3 DE IMÁGENES ESTILO GOOGLE */}
-                                <AnimatePresence>
-                                    {recaptchaState === 'challenge' && (
-                                        <motion.div
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            exit={{ opacity: 0, y: -10 }}
-                                            className="bg-white border border-[#c1c1c1] rounded-lg shadow-xl p-3 max-w-[310px] mx-auto text-zinc-900 space-y-3"
-                                        >
-                                            <div className="bg-[#4a90e2] text-white p-3 rounded-md space-y-1">
-                                                <p className="text-[11px] font-normal leading-tight">
-                                                    {t('projects.items.silent_decay.demo.challenge_header')}
-                                                </p>
-                                                <p className="text-sm font-bold leading-tight">
-                                                    {t('projects.items.silent_decay.demo.challenge_target')}
-                                                </p>
-                                            </div>
-
-                                            {/* Cuadrícula de 3x3 */}
-                                            <div className="grid grid-cols-3 gap-1.5 aspect-square">
-                                                {challengeImages.map((imgSrc, idx) => {
-                                                    const isSelected = selectedSquares.includes(idx)
-                                                    return (
-                                                        <div
-                                                            key={idx}
-                                                            onClick={() => toggleSquareSelection(idx)}
-                                                            className={`relative aspect-square rounded cursor-pointer overflow-hidden border-2 transition ${isSelected ? 'border-blue-500 scale-95' : 'border-transparent hover:opacity-90'
-                                                                }`}
-                                                        >
-                                                            <img src={imgSrc} alt={`Recaptcha tile ${idx}`} className="w-full h-full object-cover" />
-                                                            {isSelected && (
-                                                                <div className="absolute top-1 right-1 w-5 h-5 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">
-                                                                    ✓
-                                                                </div>
-                                                            )}
-                                                        </div>
-                                                    )
-                                                })}
-                                            </div>
-
-                                            <div className="flex items-center justify-between border-t border-zinc-200 pt-2">
-                                                <span className="text-[10px] text-zinc-400">Google reCAPTCHA</span>
-                                                <button
-                                                    type="button"
-                                                    onClick={handleVerifyChallenge}
-                                                    className="px-4 py-1.5 bg-[#4a90e2] hover:bg-blue-600 text-white text-xs font-bold rounded shadow transition cursor-pointer"
-                                                >
-                                                    {t('projects.items.silent_decay.demo.verify_btn')}
-                                                </button>
-                                            </div>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
 
                                 {captchaError && (
                                     <p className="text-red-400 text-xs font-semibold text-center">
@@ -650,8 +537,8 @@ export default function UnityGameProject() {
                                 <button
                                     type="button"
                                     onClick={handleConfirmDownload}
-                                    disabled={recaptchaState !== 'verified'}
-                                    className={`w-full py-3 text-white font-bold text-sm rounded-xl transition shadow-lg ${recaptchaState === 'verified'
+                                    disabled={!recaptchaToken}
+                                    className={`w-full py-3 text-white font-bold text-sm rounded-xl transition shadow-lg ${recaptchaToken
                                         ? 'bg-purple-600 hover:bg-purple-500 shadow-purple-600/30 cursor-pointer'
                                         : 'bg-zinc-800 text-zinc-500 cursor-not-allowed opacity-60'
                                         }`}
