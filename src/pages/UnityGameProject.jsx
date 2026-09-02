@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 
-// URLs configurables de Google Drive para la Demo (Links reales colocados por el usuario)
-const DRIVE_PC_URL = 'https://drive.google.com/file/d/19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b/view?usp=sharing'
-const DRIVE_ANDROID_URL = 'https://drive.google.com/file/d/1BgjWAG7jVIw9YXitIvLGonsfBayIAn82/view?usp=sharing'
+// URLs de Descarga Directa Automática de Google Drive para la Demo (sin abrir la pestaña de vista previa)
+const DRIVE_PC_URL = 'https://drive.google.com/uc?export=download&id=19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b'
+const DRIVE_ANDROID_URL = 'https://drive.google.com/uc?export=download&id=1BgjWAG7jVIw9YXitIvLGonsfBayIAn82'
 
 // Clave pública oficial de Google reCAPTCHA v2 (Casilla de v2) para Silent Decay Demo
 const RECAPTCHA_SITE_KEY = '6LdkGqQtAAAAAOY1MBkQJrQvO8xUGxWhXJhMRxTD'
@@ -68,9 +68,14 @@ export default function UnityGameProject() {
             return updated
         })
 
-        // Iniciar descarga / abrir Google Drive con el enlace real del usuario
+        // Iniciar descarga automática directa sin redirigir ni abrir pestaña en Drive
         const targetUrl = isPc ? DRIVE_PC_URL : DRIVE_ANDROID_URL
-        window.open(targetUrl, '_blank')
+        const link = document.createElement('a')
+        link.href = targetUrl
+        link.setAttribute('download', '')
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
 
         // Cerrar modal
         setDownloadModalOpen(false)
