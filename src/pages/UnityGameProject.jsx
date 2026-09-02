@@ -23,7 +23,11 @@ export default function UnityGameProject() {
     const [downloadPlatform, setDownloadPlatform] = useState(null) // 'pc' | 'android'
     const [recaptchaToken, setRecaptchaToken] = useState(null)
     const [captchaError, setCaptchaError] = useState(false)
-    const [downloadCounts, setDownloadCounts] = useState({ pc: 17, android: 12 })
+    const [downloadCounts, setDownloadCounts] = useState(() => {
+        const savedPc = parseInt(localStorage.getItem('sd_downloads_pc') || '17', 10)
+        const savedAndroid = parseInt(localStorage.getItem('sd_downloads_android') || '14', 10)
+        return { pc: savedPc, android: savedAndroid }
+    })
 
     // Cargar y sincronizar el contador de descargas global en tiempo real desde Firebase
     useEffect(() => {
@@ -32,6 +36,8 @@ export default function UnityGameProject() {
             .then(data => {
                 if (data && typeof data.pc === 'number' && typeof data.android === 'number') {
                     setDownloadCounts({ pc: data.pc, android: data.android })
+                    localStorage.setItem('sd_downloads_pc', data.pc.toString())
+                    localStorage.setItem('sd_downloads_android', data.android.toString())
                 }
             })
             .catch(() => { })
