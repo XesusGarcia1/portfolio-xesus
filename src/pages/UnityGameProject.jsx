@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 // URLs de Descarga Directa Automática de Google Drive para la Demo (sin abrir la pestaña de vista previa)
-const DRIVE_PC_URL = 'https://drive.google.com/uc?export=download&id=19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b'
-const DRIVE_ANDROID_URL = 'https://drive.google.com/uc?export=download&id=1BgjWAG7jVIw9YXitIvLGonsfBayIAn82'
+const DRIVE_PC_URL = 'https://drive.google.com/uc?export=download&id=19WlnnZFLA1vmeIMiCmwGTIc6IvYnE2_b&confirm=t'
+const DRIVE_ANDROID_URL = 'https://drive.google.com/uc?export=download&id=1BgjWAG7jVIw9YXitIvLGonsfBayIAn82&confirm=t'
 
 // Clave pública oficial de Google reCAPTCHA v2 (Casilla de v2) para Silent Decay Demo
 const RECAPTCHA_SITE_KEY = '6LdkGqQtAAAAAOY1MBkQJrQvO8xUGxWhXJhMRxTD'
