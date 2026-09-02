@@ -10,6 +10,9 @@ const DRIVE_ANDROID_URL = 'https://drive.google.com/file/d/1BgjWAG7jVIw9YXitIvLG
 // Clave pública oficial de Google reCAPTCHA v2 (Casilla de v2) para Silent Decay Demo
 const RECAPTCHA_SITE_KEY = '6LdkGqQtAAAAAOY1MBkQJrQvO8xUGxWhXJhMRxTD'
 
+// URL de la Base de Datos en tiempo real de Firebase de Google del usuario
+const FIREBASE_DB_URL = 'https://silent-decay-default-rtdb.firebaseio.com/downloads.json'
+
 export default function UnityGameProject() {
     const { t } = useTranslation()
     const [selectedMap, setSelectedMap] = useState('Hospital')
@@ -20,29 +23,15 @@ export default function UnityGameProject() {
     const [downloadPlatform, setDownloadPlatform] = useState(null) // 'pc' | 'android'
     const [recaptchaToken, setRecaptchaToken] = useState(null)
     const [captchaError, setCaptchaError] = useState(false)
-    const [downloadCounts, setDownloadCounts] = useState({ pc: 14, android: 8 })
+    const [downloadCounts, setDownloadCounts] = useState({ pc: 17, android: 12 })
 
-    // Cargar y sincronizar el contador de descargas (API remota con fallback a localStorage)
+    // Cargar y sincronizar el contador de descargas global en tiempo real desde Firebase
     useEffect(() => {
-        const savedPc = parseInt(localStorage.getItem('sd_downloads_pc') || '14', 10)
-        const savedAndroid = parseInt(localStorage.getItem('sd_downloads_android') || '8', 10)
-        setDownloadCounts({ pc: savedPc, android: savedAndroid })
-
-        // Sincronizar contador global en tiempo real mediante CounterAPI
-        fetch('https://api.counterapi.dev/v1/xesus-garcia-portfolio/silent-decay-downloads-pc')
+        fetch(FIREBASE_DB_URL)
             .then(res => res.json())
             .then(data => {
-                if (data && typeof data.count === 'number') {
-                    setDownloadCounts(prev => ({ ...prev, pc: data.count }))
-                }
-            })
-            .catch(() => { })
-
-        fetch('https://api.counterapi.dev/v1/xesus-garcia-portfolio/silent-decay-downloads-android')
-            .then(res => res.json())
-            .then(data => {
-                if (data && typeof data.count === 'number') {
-                    setDownloadCounts(prev => ({ ...prev, android: data.count }))
+                if (data && typeof data.pc === 'number' && typeof data.android === 'number') {
+                    setDownloadCounts({ pc: data.pc, android: data.android })
                 }
             })
             .catch(() => { })
@@ -63,18 +52,21 @@ export default function UnityGameProject() {
         }
 
         const isPc = downloadPlatform === 'pc'
-        const targetKey = isPc ? 'silent-decay-downloads-pc' : 'silent-decay-downloads-android'
-        const localStorageKey = isPc ? 'sd_downloads_pc' : 'sd_downloads_android'
 
-        // Incrementar contador local
+        // Incrementar y sincronizar instantáneamente en la base de datos en la nube (Firebase)
         setDownloadCounts(prev => {
-            const newCount = (prev[downloadPlatform] || 0) + 1
-            localStorage.setItem(localStorageKey, newCount.toString())
-            return { ...prev, [downloadPlatform]: newCount }
-        })
+            const newPc = isPc ? prev.pc + 1 : prev.pc
+            const newAndroid = !isPc ? prev.android + 1 : prev.android
+            const updated = { pc: newPc, android: newAndroid }
 
-        // Incrementar en servidor global
-        fetch(`https://api.counterapi.dev/v1/xesus-garcia-portfolio/${targetKey}/up`).catch(() => { })
+            fetch(FIREBASE_DB_URL, {
+                method: 'PATCH',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updated)
+            }).catch(() => { })
+
+            return updated
+        })
 
         // Iniciar descarga / abrir Google Drive con el enlace real del usuario
         const targetUrl = isPc ? DRIVE_PC_URL : DRIVE_ANDROID_URL
