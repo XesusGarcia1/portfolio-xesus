@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import ReCAPTCHA from 'react-google-recaptcha'
 
 // URLs de Descarga Directa Automática de Dropbox para la Demo (con dl=1 para descarga silenciosa sin salir de la web)
-const DRIVE_PC_URL = 'https://www.dropbox.com/scl/fo/dedugxa17k05icg8g83fs/AECkCokhzoDC4d48EMzWyxc?rlkey=mqb0qmdlw49a8mmtwgci64ahc&st=g208884i&dl=1'
-const DRIVE_ANDROID_URL = 'https://www.dropbox.com/scl/fo/d68n8zxeu5h5l2ybof7hf/AC_qQUUbZnqZ6y7MtZp4Jgk?rlkey=glyf5v41demwcz49wvvnq8xzc&st=y3qnvy7j&dl=1'
+const DRIVE_PC_URL = 'https://www.dropbox.com/scl/fi/4motb41m411u9m07rxpmp/Silent-Decay-Game.rar?rlkey=l7lyygl1i2z2jdxwl7l1tdmt5&st=xy4onzd8&dl=1'
+const DRIVE_ANDROID_URL = 'https://www.dropbox.com/scl/fi/skvmqxjn23sonqeofx9zx/SilentDecay.apk?rlkey=3wv7vmuoane8djd6xo13mcueu&st=ra9ayav1&dl=1'
 
 // Clave pública oficial de Google reCAPTCHA v2 (Casilla de v2) para Silent Decay Demo
 const RECAPTCHA_SITE_KEY = '6LdkGqQtAAAAAOY1MBkQJrQvO8xUGxWhXJhMRxTD'
