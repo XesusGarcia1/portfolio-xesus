@@ -18,7 +18,7 @@ export default function Navbar() {
     ]
 
     return (
-        <header className="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-md z-100">
+        <header className="border-b border-zinc-800 sticky top-0 bg-zinc-950/80 backdrop-blur-md z-50">
             <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
                 {/* Logo */}
                 <NavLink to="/" className="font-bold text-lg tracking-wide">
