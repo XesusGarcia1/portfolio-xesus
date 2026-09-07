@@ -179,7 +179,7 @@ export default function UnityGameProject() {
                             controls
                             poster="/gamePreview/thumbnail.jpg"
                         >
-                            <source src="/image/silent-decay/Menu/Silent Decay-Menu.mp4" type="video/mp4" />
+                            <source src="/image/silent-decay/Menu/menu-video.mp4" type="video/mp4" />
                             Tu navegador no soporta el elemento de video.
                         </video>
                         <div className="absolute top-4 right-4 z-10">
