@@ -103,28 +103,31 @@ export default function UnityGameProject() {
     // Configuración de la multimedia por mapa
     const mapsData = {
         'Hospital': {
-            video: '/image/silent-decay/Hospital/Hosp-v.mp4',
+            video: '/image/silent-decay/Hospital/hospital-video.mp4',
             images: [
-                '/image/silent-decay/Hospital/Hosp1.png',
-                '/image/silent-decay/Hospital/Hosp2.png'
+                '/image/silent-decay/Hospital/hospital-1.png',
+                '/image/silent-decay/Hospital/hospital-2.png',
+                '/image/silent-decay/Hospital/hospital-3.png'
             ],
             desc: t('projects.items.silent_decay.maps.hospital.desc')
         },
         'Industrial Depot': {
-            video: '/image/silent-decay/Industrial Depot/DepIndustrial-v.mp4',
+            video: '/image/silent-decay/Industrial Depot/industrial-video.mp4',
             images: [
-                '/image/silent-decay/Industrial Depot/DepIndustrial1.png',
-                '/image/silent-decay/Industrial Depot/DepIndustrial2.png',
-                '/image/silent-decay/Industrial Depot/DepIndustrial3.png',
-                '/image/silent-decay/Industrial Depot/DepIndustrial4.png'
+                '/image/silent-decay/Industrial Depot/industrial-1.png',
+                '/image/silent-decay/Industrial Depot/industrial-2.png',
+                '/image/silent-decay/Industrial Depot/industrial-3.png',
+                '/image/silent-decay/Industrial Depot/industrial-4.png'
             ],
             desc: t('projects.items.silent_decay.maps.industrial.desc')
         },
         'Tunnels': {
-            video: '/image/silent-decay/Tunnels/Tunn-v.mp4',
+            video: '/image/silent-decay/Tunnels/tunnels-video.mp4',
             images: [
-                '/image/silent-decay/Tunnels/Tunn1.png',
-                '/image/silent-decay/Tunnels/Tunn2.png'
+                '/image/silent-decay/Tunnels/tunnels-1.png',
+                '/image/silent-decay/Tunnels/tunnels-2.png',
+                '/image/silent-decay/Tunnels/tunnels-3.png',
+                '/image/silent-decay/Tunnels/tunnels-4.png'
             ],
             desc: t('projects.items.silent_decay.maps.tunnels.desc')
         }
@@ -141,7 +144,7 @@ export default function UnityGameProject() {
                     autoPlay
                     playsInline
                 >
-                    <source src="/image/silent-decay/Menu/Silent Decay Loop.mp4" type="video/mp4" />
+                    <source src="/image/silent-decay/Menu/menu-video.mp4" type="video/mp4" />
                 </video>
                 {/* Degradados oscuros de superposición */}
                 <div className="absolute inset-0 bg-linear-to-b from-transparent via-zinc-950/70 to-zinc-950" />
